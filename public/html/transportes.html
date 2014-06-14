@@ -11,39 +11,38 @@
 
 
 <ul id="lst-cadastro" class="lst-cadastro">
-<div id="menu-home" class="menu"><a href="../index.html"><li>☼</li></a></div>
+<a id="menu-home" class="menu" href="../index.html"><li>☼</li></a>
 
-<div id="menu-pontosturisticos" class="menu"><a href="pontosturisticos.html"><li>Pontos Turísticos    </li></a></div>
+<a id="menu-pontosturisticos" class="menu" href="pontosturisticos.html"><li>Pontos Turísticos    </li></a>
 
-<div id="menu-hospedagem" class="menu"><a href="hospedagem.html"><li>Hospedagem</li></a></div>
+<a id="menu-hospedagem" class="menu" href="hospedagem.html"><li>Hospedagem</li></a>
 
-<div id="menu-restaurantes" class="menu">    <a href="restaurantes.html"><li>Restaurantes         </li></a></div>
+<a id="menu-restaurantes" class="menu" href="restaurantes.html"><li>Restaurantes</li></a>
 
-<div id="menu-transportes" class="menu">     <a href="#"><li>Transportes          </li></a></div>
+<a id="menu-transportes" class="menu" href="#"><li>Transportes</li></a>
 
-<div id="menu-utilidadepublica" class="menu"><a href="utilidadepublica.html"><li>Utilidade Publica    </li></a></div>
+<a id="menu-utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidade Publica</li></a>
 
                                                                             </ul>
-    <figure id="imghome" class="imghome"><img src="../img/imghome.jpg"></figure>
-   <form id="form1" action="huehuehue.php" method="post">
+    <figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
+   <form class"form-class" method="post">
 
-    <fieldset id="xxy">
-        <fieldset id="informacoesgerais"><legend>Informações Gerais</legend>
+    <fieldset id="fs-t">
+        <fieldset id="infog"><legend>Informações Gerais</legend>
     <fieldset id="tipotransportes"><legend>Tipo:</legend>
     <input type="radio" name="btnradio" id="opc-taxi"/> Taxi
-    <input type="radio" name="btnradio" id="opc-taxi"/> Onibus
-    <input type="radio" name="btnradio" id="opc-taxi"/> Passeios por rota
-    <input type="radio" name="btnradio" id="opc-taxi"/> outros
+    <input type="radio" name="btnradio" id="opc-onibus"/> Onibus
+    <input type="radio" name="btnradio" id="opc-passeiosrota"/> Passeios por rota
+    <input type="radio" name="btnradio" id="opc-outros"/> outros
 
      </fieldset>
-    <label for="xname1"> <p>Nome do Ponto:<input type="text" name="nNome" id="xname" placeholder="nome do taxi/transporte" size="150"/></label></p>
-    <label for="endName1"> <p>Localizaçao:<input type="text" name="NameEnd" id="endName" placeholder="bairro,rua, Av, bairo, Hue..." size="147"/></label></p>
-  <label for="descricao-op1"> <p>Descrição:</label></p>
- <textarea id="descricao-op1" placeholder="Escreve uma descriçao breve de 300 caracteres aqui." maxlength="300"></textarea>
-           <div id="botoes-form"><input id="btn-cadastro" type="button"  value="Cadastrar">
-   <input id="btn-cancelar" type="reset" value="Cancelar"> </div>
+    <label for="t-nome"> <p>Nome:<input type="text" name="tnome" id="t-nome" placeholder="nome do taxi/transporte" size="150"/></label></p>
+      <label for="t-textarea"> <p>Descrição:</label></p>
+ <textarea id="t-textarea" placeholder="Escreve uma descriçao breve de 300 caracteres aqui." maxlength="300"></textarea>
+           <input id="btncadastrar-transportes" type="button"  value="Cadastrar">
+   <input id="btn-cancelar" type="reset" value="Cancelar">
 
        </fieldset>
-       </fieldset>
+
         </form>
     </body>

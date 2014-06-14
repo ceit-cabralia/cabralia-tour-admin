@@ -10,32 +10,31 @@
     <body>
 
 <ul id="lst-cadastro" class="lst-cadastro">
-<div id="menu-home" class="menu"><a href="../index.html"><li>☼</li></a></div>
+<a id="menu-home" class="menu" href="../index.html"><li>☼</li></a>
 
-<div id="menu-pontosturisticos" class="menu"><a href="pontosturisticos.html"><li>Pontos Turísticos    </li></a></div>
+<a id="menu-pontosturisticos" class="menu" href="pontosturisticos.html"><li>Pontos Turísticos    </li></a>
 
-<div id="menu-hospedagem" class="menu"><a href="hospedagem.html"><li>Hospedagem</li></a></div>
+<a id="menu-hospedagem" class="menu" href="hospedagem.html"><li>Hospedagem</li></a>
 
-<div id="menu-restaurantes" class="menu">    <a href="#"><li>Restaurantes         </li></a></div>
+<a id="menu-restaurantes" class="menu" href="#"><li>Restaurantes</li></a>
 
-<div id="menu-transportes" class="menu">     <a href="transportes.html"><li>Transportes          </li></a></div>
+<a id="menu-transportes" class="menu" href="transportes.html"><li>Transportes</li></a>
 
-<div id="menu-utilidadepublica" class="menu"><a href="utilidadepublica.html"><li>Utilidade Publica    </li></a></div>
+<a id="menu-utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidade Publica</li></a>
 
                                                                             </ul>
-    <figure id="imghome" class="imghome"><img src="../img/imghome.jpg"></figure>
-   <form id="form1" action="huehuehue.php" method="post">
-    <fieldset id="informacoesgerais1"><legend>Informações Gerais</legend>
+    <figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
+   <form class="form-class" method="post">
+    <fieldset id="fs-infog"><legend>Informações Gerais</legend>
+    <fieldset id="r-fs">
+    <label for="r-nome"> <p>Nome:<input type="text" name="rnome" id="r-nome" placeholder="nome do restaurante" size="150"/></label></p>
+    <label for="r-endereço"> <p>Endereço:<input type="text" name="rendereço" id="r-endereço" placeholder="Rua, Av, bairo, Hue..." size="147"/></label></p>
+    <label for="r-tel"> <p>Telefone:<input type="text" name="htel" id="r-tel" placeholder="Telefone para contato"/></label></p>
+  <label for="r-textarea"> <p>Descrição:</p>
+ <textarea id="r-textarea" placeholder="Escreve uma descriçao breve de 300 caracteres aqui." maxlength="300"></textarea></label>
+<input id="btncadastrar-restaurantes" type="button"  value="Cadastrar">
+   <input id="btn-cancelar" type="reset" value="Cancelar">
 
-
-
-    <fieldset id="xxy">
-    <label for="xname1"> <p>Nome do Restaurante:<input type="text" name="nNome" id="xname" placeholder="Nome do Restaurante" size="150"/></label></p>
-    <label for="endName1"> <p>Endereço:<input type="text" name="NameEnd" id="endName" placeholder="bairro,rua, Av, bairo, Hue..." size="147"/></label></p>
-  <label for="descricao-op1"> <p>Descrição:</label></p>
- <textarea id="descricao-op1" placeholder="Escreve uma descriçao breve de 300 caracteres aqui." maxlength="300"></textarea>
-
-       </fieldset>
-       </fieldset>
+       </fieldset></fieldset>
         </form>
-    </body>
+    </body></html>
