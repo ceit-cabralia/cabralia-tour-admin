@@ -2,14 +2,13 @@
 padding: 0;
 margin: 4px;
 }
-
 a {
 color: #FFF;
 text-decoration: none;
 }
 .menu{
 font-size: 24px;
-background-color: #000;  
+background-color: #000;
 border: 1px black solid;
 display: inline-block;
 text-align: center;
@@ -22,37 +21,33 @@ list-style: none;
 }
 #menu-home{
 color: #000;
-    width: 4%;
+width: 4%;
 border-top-left-radius: 30px;
 border-top-right-radius: 30px;
 border-bottom-left-radius: 0px;
 border-bottom-right-radius: 0px;
 }
-#menu-utilidadepublica{
-background-color: #6f0096;
-}
+#menu-pontosturisticos {
+background-color: #dd4c16}
+form {
+background-color: #FFF;
+border-radius: 5px;}
 body {
-background-color: rgba(142, 64, 140, 0.71);}
-
+background-color:#fd8039;}
 .menu:hover {
 background-color: #9d9d9d;
 border:1px solid #0a11b7;
 }
-form {
-background-color: #FFF;
-border-radius: 5px;}
-
 #lst-cadastro {
-rgba(142, 64, 140, 0.71);}
+background-color: rgba(234, 138, 56, 0);}
 .imghome {
 margin-top: -12px;
 }
-
 /* Css form */
 textarea {
 width: 97%;
 height:35%;}
 #xname1 {
-width: 94%;}
+width: 90%;}
 #endName1 {
-width: 91%;}
+width: 92%;}
