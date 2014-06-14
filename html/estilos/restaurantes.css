@@ -1,0 +1,53 @@
+*{
+padding: 0;
+margin: 4px;
+}
+
+a {
+color: #FFF;
+text-decoration: none;
+}
+.menu{
+font-size: 24px;
+background-color: #000;  
+border: 1px black solid;
+display: inline-block;
+text-align: center;
+width: 18%;
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+list-style: none;
+}
+#menu-home{
+color: #000;
+    width: 4%;
+border-top-left-radius: 30px;
+border-top-right-radius: 30px;
+border-bottom-left-radius: 0px;
+border-bottom-right-radius: 0px;
+}
+#menu-restaurantes{
+background-color: #097c05;
+}
+body {
+background-color: #0dfc3b;}
+
+.menu:hover {
+background-color: #9d9d9d;
+border:1px solid #0a11b7;
+}
+form {
+background-color: #FFF;
+border-radius: 5px;}
+
+#lst-cadastro {
+background-color: rgba(13, 252, 59, 0.83);}
+.imghome {
+margin-top: -12px;
+}
+
+textarea {
+width: 95%;
+height: 20%;}
