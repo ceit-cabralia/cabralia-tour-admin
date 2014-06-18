@@ -8,6 +8,7 @@
      <link rel="stylesheet" href="estilos/restaurantes.css">
     </head>
     <body>
+        <figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
 
 <ul id="lst-cadastro" class="lst-cadastro">
 <a id="menu-home" class="menu" href="../index.html"><li>☼</li></a>
@@ -23,10 +24,19 @@
 <a id="menu-utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidade Publica</li></a>
 
                                                                             </ul>
-    <figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
+
    <form class="form-class" method="post">
     <fieldset id="fs-infog"><legend>Informações Gerais</legend>
-    <fieldset id="r-fs">
+                   <fieldset id="fs-r">
+        <fieldset id="infog"><legend>Informações Gerais</legend>
+                   <fieldset id="fs-restaurants=es"><legend>Tipo:</legend>
+    <input type="radio" name="btnradio" id="opc-tipo1"/> tipo1
+    <input type="radio" name="btnradio" id="opc-tipo2"/> tipo 2
+    <input type="radio" name="btnradio" id="opc-tipo3"/> tipo 3
+    <input type="radio" name="btnradio" id="opc-tipo4"/> tipo 4
+
+     </fieldset>
+
     <label for="r-nome"> <p>Nome:<input type="text" name="rnome" id="r-nome" placeholder="nome do restaurante" size="150"/></label></p>
     <label for="r-endereço"> <p>Endereço:<input type="text" name="rendereço" id="r-endereço" placeholder="Rua, Av, bairo, Hue..." size="147"/></label></p>
     <label for="r-tel"> <p>Telefone:<input type="text" name="htel" id="r-tel" placeholder="Telefone para contato"/></label></p>
@@ -35,6 +45,6 @@
 <input id="btncadastrar-restaurantes" type="button"  value="Cadastrar">
    <input id="btn-cancelar" type="reset" value="Cancelar">
 
-       </fieldset></fieldset>
+       </fieldset>
         </form>
     </body></html>

@@ -9,7 +9,7 @@
     </head>
     <body>
 
-
+<figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
 <ul id="lst-cadastro" class="lst-cadastro">
 <a id="menu-home" class="menu" href="../index.html"><li>☼</li></a>
 
@@ -24,10 +24,18 @@
 <a id="menu-utilidadepublica" class="menu" href="#"><li>Utilidade Publica</li></a>
 
                                                                             </ul>
-    <figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
+
     <form id="frm-u">
             <fieldset id="fs-u">
         <fieldset id="infog"><legend>Informações Gerais</legend>
+                   <fieldset id="fs-tipodeutilidade"><legend>Tipo:</legend>
+    <input type="radio" name="btnradio" id="opc-tipo1"/> tipo1
+    <input type="radio" name="btnradio" id="opc-tipo2"/> tipo 2
+    <input type="radio" name="btnradio" id="opc-tipo3"/> tipo 3
+    <input type="radio" name="btnradio" id="opc-tipo4"/> tipo 4
+
+     </fieldset>
+
     <label for="u-nome"> <p>Nome:<input type="text" name="unome" id="u-nome" placeholder="nome do taxi/transporte" size="150"/></label></p>
       <label for="u-textarea"> <p>Descrição:</label></p>
  <textarea id="u-textarea" placeholder="Escreve uma descriçao breve de 300 caracteres aqui." maxlength="300"></textarea>
