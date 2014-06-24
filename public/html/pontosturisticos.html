@@ -6,37 +6,44 @@
    <!-- deixando o App responsivo -->
    <meta name="viewport" content="width=device-width, user-scalable=no" />
      <link rel="stylesheet" href="estilos/pontosturisticos.css">
+     <script type="text/javascript" src="../../server.js"></script>
     </head>
     <body>
 
-
+<figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
 <ul id="lst-cadastro" class="lst-cadastro">
 <a id="menu-home" class="menu" href="../index.html"><li>☼</li></a>
 
 <a id="menu-pontosturisticos" class="menu" href="#"><li>Pontos Turísticos    </li></a>
 
-<a id="menu-hospedagem" class="menu" href="hospedagem.html"><li>Hospedagem</li></a>
+<a id="menu-hospedagem" class="menu" href="hospedagem.html"><li>Hospedagens</li></a>
 
 <a id="menu-restaurantes" class="menu" href="restaurantes.html"><li>Restaurantes</li></a>
 
 <a id="menu-transportes" class="menu" href="transportes.html"><li>Transportes</li></a>
 
-<a id="menu-utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidade Publica</li></a>
+<a id="menu-utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidades Públicas</li></a>
 
                                                                             </ul>
-    <figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
-   <form class="form-class" method="post">
-    <fieldset id="fs-infog"><legend>Informações Gerais</legend>
 
-    <fieldset id="p-fs">
+   <form class="form-class" method="post">
+    <fieldset id="fs-infog">
+
+
+<<<<<<< HEAD
+    <label for="p-nome"> <p>Nome:<input type="text"  required name="pnome" id="p-nome" placeholder="Nome do ponto turistico" size="150"/></label></p>
+    <label for="p-endereço"> <p>Endereço:<input type="text"  required name="pendereço" id="p-endereço" placeholder="Rua, Av, bairo, ..." size="147"/></label></p>
+=======
+
     <label for="p-nome"> <p>Nome:<input type="text" name="pnome" id="p-nome" placeholder="Nome do ponto turistico" size="150"/></label></p>
     <label for="p-endereço"> <p>Endereço:<input type="text" name="pendereço" id="p-endereço" placeholder="Rua, Av, bairo, ..." size="147"/></label></p>
+>>>>>>> origin/master
 
   <label for="p-textarea"> <p>Descrição:</p>
- <textarea id="p-textarea" placeholder="Escreve uma descriçao breve de 300 caracteres aqui." maxlength="300"></textarea></label>
-<input id="btncadastrar-turisticos" type="button"  value="Cadastrar">
-   <input id="btn-cancelar" type="reset" value="Cancelar">
+ <textarea id="p-textarea" required placeholder="Faça uma breve descriçao sobre os Pontos Turisticos..." maxlength="300"></textarea></label>
+<input id="btncadastrar-turisticos" type="submit"  value="Cadastrar">
+   <input id="btn-cancelar" type="reset" value="Cancelar" action="validarH()">
 
-       </fieldset></fieldset>
+       </fieldset>
         </form>
     </body></html>
