@@ -11,18 +11,18 @@ font-size: 160%;
 background-color: #000;
 display: inline-block;
 text-align: center;
-width: 17.95%;
+width: 17.72%;
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
 list-style: none;
 }
-#menu-transportes {
+#menu_transportes {
 border-left: 1px solid black;
 border-right: 1px solid black;
 border-top: 1px solid black;
-background-color: rgb(182, 77, 250);
+background-color: #DEB887;
 border-top-left-radius: 0px;
 border-top-right-radius: 0px;
 border-bottom-left-radius: 0px;
@@ -30,14 +30,14 @@ border-bottom-right-radius: 0px;
 height: 5.5%;
 color: black;
 }
-#menu-transportes:hover {
+#menu_transportes:hover {
 border-left: 1px solid black;
 border-right: 1px solid black;
 border-top: 1px solid black;
-border-bottom:1px solid rgb(182, 77, 250);
-background-color: rgb(182, 77, 250);}
+border-bottom:1px solid #DEB887;
+background-color: #DEB887}
 
-#menu-home{
+#menu_home{
 border: 1px solid black;
 color: #FFF;
     width: 4%;
@@ -48,20 +48,14 @@ border-bottom-left-radius: 5px;
 border-bottom-right-radius: 5px;
 
 }
-body {background-color: #cecece;
+body {background-color: #a39a9a;
 }
-
-#texto-inst {
-background-color: #FFF;}
-#textointro1 {
-background-color: #FFF;}
 
 .menu:hover {
 background-color: #9d9d9d;
-border:1px solid #0a11b7;
 }
 
-#lst-cadastro {
+#lst_cadastro {
 margin-left: 2px;
 margin-top: -2.2%;
 background-color: rgba(164, 35, 247, 0.03);}
@@ -69,19 +63,23 @@ background-color: rgba(164, 35, 247, 0.03);}
 margin-top: -3%;
 margin-left: -2px;
 }
-
 textarea {
-width: 100%;
-height: 18%;}
+width: 99.9%;
+height: 46.5%;
+margin-top: -10px;}
 p{
-margin: 6px;
-padding: 4px;}
-
+margin-top: 4px;
+}
+.tipo_transportes {
+margin-top: 20px;
+margin-left: 2px;}
 form{
-height: 70%;
-width: 98%;
+border-bottom-right-radius: 5px;
+border-bottom-left-radius: 5px;
+height: 67%;
+width: 97%;
 border: 1px solid black;
-background-color:rgb(182, 77, 250);;
-margin-top: -1.55%;
+background-color:#DEB887;
+margin-top: -21px;
 margin-right:  1.66%;
 margin-left: 0.5%;}

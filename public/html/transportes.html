@@ -6,40 +6,44 @@
    <!-- deixando o App responsivo -->
    <meta name="viewport" content="width=device-width, user-scalable=no" />
      <link rel="stylesheet" href="estilos/transportes.css">
+     <script type="text/javascript" src="../../server.js"></script>
     </head>
     <body>
-    <figure id="img-home" class="imghome"><img src="../img/imghome.jpg"></figure>
+    <figure id="img_home" class="imghome"><img src="../img/imghome.jpg"></figure>
 
-<ul id="lst-cadastro" class="lst-cadastro">
-<a id="menu-home" class="menu" href="../index.html"><li>☼</li></a>
+<ul id="lst_cadastro" class="lst_cadastro">
+<a id="menu_home" class="menu" href="../index.html"><li>☼</li></a>
 
-<a id="menu-pontosturisticos" class="menu" href="pontosturisticos.html"><li>Pontos Turísticos    </li></a>
+<a id="menu_pontosturisticos" class="menu" href="pontosturisticos.html"><li>Pontos Turísticos    </li></a>
 
-<a id="menu-hospedagem" class="menu" href="hospedagem.html"><li>Hospedagem</li></a>
+<a id="menu_hospedagem" class="menu" href="hospedagem.html"><li>Hospedagens</li></a>
 
-<a id="menu-restaurantes" class="menu" href="restaurantes.html"><li>Restaurantes</li></a>
+<a id="menu_restaurantes" class="menu" href="restaurantes.html"><li>Restaurantes</li></a>
 
-<a id="menu-transportes" class="menu" href="#"><li>Transportes</li></a>
+<a id="menu_transportes" class="menu" href="#"><li>Transportes</li></a>
 
-<a id="menu-utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidade Publica</li></a>
+<a id="menu_utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidades Públicas</li></a>
 
                                                                             </ul>
 
-   <form class"form-class" method="post">
- <fieldset id="fs-t"><legend>Informações Gerais</legend>
-    <fieldset id="tipotransportes"><legend>Tipo:</legend>
-    <input type="radio" name="btnradio" id="opc-taxi"/> Taxi
-    <input type="radio" name="btnradio" id="opc-onibus"/> Onibus
-    <input type="radio" name="btnradio" id="opc-passeiosrota"/> Passeios por rota
-    <input type="radio" name="btnradio" id="opc-outros"/> outros
-</fieldset>
-    <label for="t-nome"> <p>Nome:<input type="text" name="tnome" id="t-nome" placeholder="nome do taxi/transporte" size="150"/></label></p>
-      <label for="t-textarea"> <p>Descrição:</label></p>
- <textarea id="t-textarea" placeholder="Escreve uma descriçao breve de 300 caracteres aqui." maxlength="300"></textarea>
-           <input id="btncadastrar-transportes" type="button"  value="Cadastrar">
-   <input id="btn-cancelar" type="reset" value="Cancelar">
-</fildset>
+   <form method="post">
+ <fieldset>
+    <div class="tipo_transportes">
+        Tipo:
+  <select>
+       <option value="taxis">Taxis</option>
+        <option value="transportes_publicos">Transportes Públicos</option>
+        </select>
+        <label for="t_nome"> Nome:<input type="text" required  id="t_nome" placeholder="nome do taxi/transporte" size="100"/></label>
+     </div>
 
+    <label for="t_tel1"> <p>Telefone:<input type="text" required  id="t_tel1" size="25" placeholder="Telefone para contato 1"/></label>
+       <label for="t_tel2"> Telefone:<input type="text"  n id="t_tel2" size="25" placeholder="Telefone para contato 2"/></label>
+      <label for="t_textarea"> <p>Descrição:</label></p>
+ <textarea id="t_textarea" required placeholder="Faça uma breve descrição sobre esse serviço..." maxlength="300"></textarea>
+           <input id="btncadastrar_transportes" type="submit"  value="Cadastrar" action="validarH()">
+   <input id="btn_cancelar" type="reset" value="Cancelar">
+</fildset>
 
         </form>
     </body>
