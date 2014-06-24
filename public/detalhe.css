@@ -4,7 +4,7 @@
 body {
   background: url(img/bg.jpg) no-repeat center top fixed #e5e5e5;
   font-family: Arial;
-  margin: 120px 0 0 0;
+  margin: 40px 0 0 0;
   -webkit-background-size: cover;
      -moz-background-size: cover;
        -o-background-size: cover;
@@ -148,4 +148,21 @@ button {
 
 .content.utilidade-content {
   border-top: solid 15px rgb(170, 156, 248);
+}
+
+
+/*
+ * MEDIA QUERY
+ */
+@media only screen
+and (max-width : 800px) {
+  .lst-cadastro li {
+    display: block;
+    border-radius: 0;
+    border-top: solid 1px #e5e5e5;
+  }
+  .lst-cadastro li:first-child {
+    border-top: none;
+    border-radius: 5px 5px 0 0;
+  }
 }
