@@ -1,0 +1,59 @@
+<! DOCTYPE html>
+<html>
+
+    <head>
+   <meta charset="utf-8">
+   <!-- deixando o App responsivo -->
+   <meta name="viewport" content="width=device-width, user-scalable=no" />
+     <link rel="stylesheet" href="./html/estilos/hospedagem.css">
+     
+    </head>
+    <body>
+
+    <figure id="img_home" class="imghome"><img src="../img/imghome.jpg"></figure>
+<ul id="lst_cadastro" class="lst_cadastro">
+<a id="menu_home" class="menu" href="../index.html"><li>☼</li></a>
+
+<a id="menu_pontosturisticos" class="menu" href="pontosturisticos.html"><li>Pontos Turísticos    </li></a>
+
+<a id="menu_hospedagem" class="menu" href="#"><li>Hospedagens</li></a>
+
+<a id="menu_restaurantes" class="menu" href="restaurantes.html"><li>Restaurantes</li></a>
+
+<a id="menu_transportes" class="menu" href="transportes.html"><li>Transportes</li></a>
+
+<a id="menu_utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidades Públicas</li></a>
+
+                                                                            </ul>
+
+    <form method="post" name="hospedagem"  action="cadastrarH">
+    <fieldset>
+
+
+       <div id="tipos_hospedagem">
+           Tipo:   <select id="tipo">
+        <option value="Hotéis">Hotéis</option>
+        <option value="Pousadas">Pousadas</option>
+        <option value="Camping">Camping</option>
+        <option value="Resorts">Resorts</option>  </select>
+            <label for="h_nome"> Nome:
+      <input  type="text" required name="nome" id="h_nome"  placeholder="Nome do estabelecimento" size="127"/></label></div>
+
+    <label for="h_endereco"> <p>Endereço:
+      <input type="text" required name="endereco" id="h_endereco" placeholder="Rua, Av, bairo, Hue..." size="147"/></label></p>
+    <label for="h_tel"> <p>Telefone:
+      <input type="text" required name="telefone" id="h_tel" placeholder="Telefone para contato"/></label>
+       <label for="h_email">Email:<input type="email"  size="51" required name="email" id="h_email" placeholder="Email para Contato"></label>
+       </p>
+
+
+  <label for="h_textarea"> <p class="descricao">Descrição:</p>
+ <textarea  required name="descricao" id="h_textarea" placeholder="Faça uma breve descriçao sobre o estabelecimento" maxlength="300"></textarea></label>
+      <input  type="submit"  value="cadastrarH"/>
+   <input id="btn_cancelar" type="reset" value="Cancelar">
+
+       </fieldset>
+        </form>
+<script type="text/javascript" src="../../server.js"></script>
+    </body>
+</html>
