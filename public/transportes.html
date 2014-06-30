@@ -1,0 +1,50 @@
+<! DOCTYPE html>
+<html>
+
+    <head>
+   <meta charset="utf-8">
+   <!-- deixando o App responsivo -->
+   <meta name="viewport" content="width=device-width, user-scalable=no" />
+     <link rel="stylesheet" href="./html/estilos/transportes.css">
+     
+    </head>
+    <body>
+    <figure id="img_home" class="imghome"><img src="../img/imghome.jpg"></figure>
+
+<ul id="lst_cadastro" class="lst_cadastro">
+<a id="menu_home" class="menu" href="../index.html"><li>☼</li></a>
+
+<a id="menu_pontosturisticos" class="menu" href="pontosturisticos.html"><li>Pontos Turísticos    </li></a>
+
+<a id="menu_hospedagem" class="menu" href="hospedagem.html"><li>Hospedagens</li></a>
+
+<a id="menu_restaurantes" class="menu" href="restaurantes.html"><li>Restaurantes</li></a>
+
+<a id="menu_transportes" class="menu" href="#"><li>Transportes</li></a>
+
+<a id="menu_utilidadepublica" class="menu" href="utilidadepublica.html"><li>Utilidades Públicas</li></a>
+
+                                                                            </ul>
+
+ <form method="post" action="cadastrarT">
+ <fieldset>
+    <div class="tipo_transportes">
+        Tipo:
+  <select>
+       <option value="taxis">Taxis</option>
+        <option value="transportes_publicos">Transportes Públicos</option>
+        </select>
+        <label for="t_nome"> Nome:<input type="text" required name="nome" id="t_nome" placeholder="nome do taxi/transporte" size="100"/></label>
+     </div>
+
+    <label for="t_tel1"> <p>Telefone:<input type="text" required name="telefone" id="t_tel1" size="25" placeholder="Telefone para contato 1"/></label>
+       <label for="t_tel2"> Telefone:<input type="text"  required name="telefone" id="t_tel2" size="25" placeholder="Telefone para contato 2"/></label>
+      <label for="t_textarea"> <p>Descrição:</label></p>
+ <textarea id="t_textarea" required name = "descricao"placeholder="Faça uma breve descrição sobre esse serviço..." maxlength="300"></textarea>
+          <input  type="submit"  value="cadastrarT"/>
+   <input id="btn_cancelar" type="reset" value="Cancelar">
+</fildset>
+
+        </form>
+    <script type="text/javascript" src="../../server.js"></script>
+    </body>

@@ -1,0 +1,52 @@
+<! DOCTYPE html>
+<html>
+
+    <head>
+   <meta charset="utf-8">
+   <!-- deixando o App responsivo -->
+   <meta name="viewport" content="width=device-width, user-scalable=no" />
+     <link rel="stylesheet" href="./html/estilos/utilidadepublica.css">
+   
+    </head>
+    <body>
+
+<figure id="img_home" class="imghome"><img src="../img/imghome.jpg"></figure>
+<ul id="lst_cadastro" class="lst_cadastro">
+<a id="menu_home" class="menu" href="../index.html"><li>☼</li></a>
+
+<a id="menu_pontosturisticos" class="menu" href="pontosturisticos.html"><li>Pontos Turísticos    </li></a>
+
+<a id="menu_hospedagem" class="menu" href="hospedagem.html"><li>Hospedagens</li></a>
+
+<a id="menu_restaurantes" class="menu" href="restaurantes.html"><li>Restaurantes</li></a>
+
+<a id="menu_transportes" class="menu" href="transportes.html"><li>Transportes</li></a>
+
+<a id="menu_utilidadepublica" class="menu" href="#"><li>Utilidades Públicas</li></a>
+
+                                                                            </ul>
+
+     <form method="post" action="cadastrarU">
+            <fieldset>
+                <div class="u_tipo">Tipo:
+
+    <select>
+        <option value="saude">Saúde</option>
+        <option value="emergencias">Emergências</option>
+        <option value="Camping">Camping</option>
+        <option value="serviçospublicos">Serviços Públicos</option>
+</select>
+<label for="u_nome">Nome:<input type="text" required name="nome" id="unome" placeholder="nome do estabelecimento" size="103"/></label></div>
+
+
+    <label for="u_tel1"> <p class="tel_u">Telefone:<input type="text" required name="telefone" size="40" id="u_tel1" placeholder="Telefone para contato"/></label>
+      <label for="u_textarea"> <p class="descricao">Descrição:</label></p>
+ <textarea id="u_textarea" required name="descricao" placeholder="Faça uma breve descriçao sobre o estabelecimento..." maxlength="300"></textarea>
+             <input  type="submit"  value="cadastrarU"/>
+   <input id="btn_cancelar" type="reset" value="Cancelar">
+
+       </fieldset>
+                                                         </form>
+    <script type="text/javascript" src="../../server.js"></script>
+    </body>
+    </html>>
