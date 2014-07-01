@@ -60,7 +60,10 @@ app.post('/cadastrarR', function(req, res) {
         });
     });
 
-app.post('/cadastrarH', function(req, res) {   
+app.post('/cadastrarH', function(req, res) {  
+    
+   
+    
   var tipo = req.body.tipo;
   var nome = req.body.nome;  
   var endereco = req.body.endereco;
