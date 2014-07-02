@@ -1,0 +1,85 @@
+<! DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Server App Hayô - Pontos Turisticos</title>
+    <!-- deixando o App responsivo -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="/css/pontosturisticos.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/controllers.js"></script>
+
+
+</head>
+
+<body ng-app ng-controller="ListaCtrl">
+    <figure id="img-home" class="imghome">
+        <img src="/img/imghome.jpg">
+    </figure>
+    <ul id="lst_cadastro" class="lst-cadastro">
+        <a id="menu_home" class="menu" href="../public/index.html">
+            <li>☼</li>
+        </a>
+        <a id="menu_pontosturisticos" class="menu" href="../public/pontosturisticos.html">
+            <li>Pontos Turísticos</li>
+        </a>
+        <a id="menu_hospedagem" class="menu" href="../public/hospedagem.html">
+            <li>Hospedagens</li>
+        </a>
+        <a id="menu_restaurantes" class="menu" href="../public/restaurantes.html">
+            <li>Restaurantes</li>
+        </a>
+        <a id="menu_transportes" class="menu" href="../public/transportes.html">
+            <li>Transportes</li>
+        </a>
+        <a id="menu_utilidadepublica" class="menu" href="../public/utilidadepublica.html">
+            <li>Utilidades Públicas</li>
+        </a>
+    </ul>
+
+    <div class="container">
+        <h4>Pontos Turisticos</h4>
+        <div class="btn-toolbar">
+            <div class="btn-group">
+                <a class="btn btn-large" href="/novo">Novo</a>
+            </div>
+            <div class="btn-group" ng-hide="nome == ''">
+                <a class="btn btn-large" href="/editar/{{nome}}">Editar</a>
+            </div>
+            <div class="btn-group" ng-hide="nome == ''">
+                <a class="btn btn-large" ng-click="excluir()">Excluir</a>
+            </div>
+        </div>
+
+        <label for="criteria" class="label" style="margin-right:6px;">Pesquisar</label>
+        <input id="criteria" type="search" ng-model="criteria">
+
+        <table class="table table-striped table-hover table-bordered">
+            <thead>
+                <th>Nome</th>
+                <th>Endereço</th>
+                <th>Descriçao</th>
+            </thead>
+            <tr ng-repeat="ponto in pontos | filter:criteria | orderBy:'nome'" ng-click="select(ponto)" ng-class="{'info': nome == ponto.nome}">
+                <td>{{ponto.nome}}</td>
+                <td>{{ponto.endereco}}</td>
+                <td>{{ponto.descricao}}</td>
+            </tr>
+        </table>
+    </div>
+
+    <body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
