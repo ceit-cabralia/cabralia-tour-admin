@@ -134,3 +134,72 @@ function EditarCtrlR($scope, $http) {
         })
     }
 }
+
+
+// CRUD de CONTROLLERS para Restaurantes    
+
+function ListaCtrlT($scope, $http) {
+    $scope.nome = '';
+
+    $http.get('/lista/transporte').success(function (data) {
+        $scope.transportes = data;
+    })
+
+    $scope.select = function (transporte) {
+        $scope.nome = transporte.nome;
+    }
+
+    $scope.excluirT = function () {
+        if ($scope.nome != '') {
+            $http.delete('/excluirT/' + $scope.nome)
+                .success(function (data) {
+                    if (data == 'err') {
+                        alert("Erro na Exclusão do Transporte");
+                    } else {
+                        alert("Transporte Excluido...");
+                    }
+                    document.location.reload(true);
+                })
+        }
+    }
+}
+
+function NovoCtrlT($scope, $http) {
+    $scope.criarT = function () {
+        $http.post('/criarT', $scope.transporte)
+            .success(function (data) {
+                if (data == 'err') {
+                    alert("Erro de gravação");
+                } else {
+                    alert("Transporte cadastrado...");
+                }
+                $scope.transporte = {};
+            })
+    }
+}
+
+function EditarCtrlT($scope, $http) {
+    var caminho = document.URL;
+    $scope._id = 0;
+    $scope.transporte = {};
+
+    caminho = caminho.substring(caminho.lastIndexOf('/'));
+    $http.get('/lista/transporte' + caminho).success(function (data) {
+        $scope._id = data[0]._id;
+        $scope.transporte.tipo = data[0].tipo;
+        $scope.transporte.nome = data[0].nome;
+        $scope.transporte.telefone = data[0].telefone;
+        $scope.transporte.descricao = data[0].descricao;
+    })
+
+    $scope.modificarT = function () {
+        $http.put('/modificarT/' + $scope._id, $scope.transporte).success(function (data) {
+            if (data == 'err') {
+                alert("Erro na Alteração");
+            } else {
+                alert("Transporte Alterado...");
+                window.location = '/T';
+            }
+        })
+    }
+}

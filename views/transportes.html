@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Server App Hayô - Restaurantes</title>
+    <title>Server App Hayô -Transportes</title>
     <!-- deixando o App responsivo -->
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link rel="stylesheet" href="/css/restaurantes.css">
+    <link rel="stylesheet" href="/css/transportes.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <script src="/js/angular.min.js"></script>
     <script src="/js/controllers.js"></script>
 
 </head>
 
-<body ng-app ng-controller="ListaCtrlR">
+<body ng-app ng-controller="ListaCtrlT">
     <figure id="img-home" class="imghome">
         <img src="/img/imghome.jpg">
     </figure>
@@ -39,16 +39,16 @@
     </ul>
 
     <div class="container">
-        <h4>Restaurantes</h4>
+        <h4>Transportes</h4>
         <div class="btn-toolbar">
             <div class="btn-group">
-                <a class="btn btn-large" href="/novoR">Novo</a>
+                <a class="btn btn-large" href="/novoT">Novo</a>
             </div>
             <div class="btn-group" ng-hide="nome == ''">
-                <a class="btn btn-large" href="/editarR/{{nome}}">Editar</a>
+                <a class="btn btn-large" href="/editarT/{{nome}}">Editar</a>
             </div>
             <div class="btn-group" ng-hide="nome == ''">
-                <a class="btn btn-large" ng-click="excluirR()">Excluir</a>
+                <a class="btn btn-large" ng-click="excluirT()">Excluir</a>
             </div>
         </div>
 
@@ -59,16 +59,14 @@
             <thead>
                 <th>Tipo</th>
                 <th>Nome</th>
-                <th>Endereço</th>
                 <th>telefone</th>
                 <th>Descriçao</th>
             </thead>
-            <tr ng-repeat="restaurante in restaurantes | filter:criteria | orderBy:'nome'" ng-click="select(f=restaurante)" ng-class="{'info': nome == restaurante.nome}">
-                <td>{{restaurante.tipo}}</td>
-                <td>{{restaurante.nome}}</td>
-                <td>{{restaurante.endereco}}</td>
-                <td>{{restaurante.telefone}}</td>
-                <td>{{restaurante.descricao}}</td>
+            <tr ng-repeat="transporte in transportes | filter:criteria | orderBy:'nome'" ng-click="select(f=transporte)" ng-class="{'info': nome == transporte.nome}">
+                <td>{{transporte.tipo}}</td>
+                <td>{{transporte.nome}}</td>
+                <td>{{transporte.telefone}}</td>
+                <td>{{transporte.descricao}}</td>
 
             </tr>
         </table>

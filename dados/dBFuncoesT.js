@@ -1,24 +1,22 @@
 banco = require('./dB.js'),
-//Funções de  CRUD para Restaurantes
-
-exports.listarR = function (req, res) {
-    restauranteModel.find().exec(function (err, restaurante) {
+//Funções de  CRUD para Transportes
+exports.listarT = function (req, res) {
+    transporteModel.find().exec(function (err, transporte) {
         if (err) {
             return console.log(err);
         }
-        return res.json(restaurante);
+        return res.json(transporte);
     });
 }
 
-exports.gravarR = function (req, res) {
-    var novoRestaurante = new restauranteModel({
+exports.gravarT = function (req, res) {
+    var novoTransporte = new transporteModel({
         tipo: req.body.tipo,
         nome: req.body.nome,
-        endereco: req.body.endereco,
         telefone: req.body.telefone,
         descricao: req.body.descricao
     });
-    novoRestaurante.save(function (err) {
+    novoTransporte.save(function (err) {
         if (err) {
             callback(err);
         } else {
@@ -27,24 +25,23 @@ exports.gravarR = function (req, res) {
     });
 }
 
-exports.procurarR = function (req, res) {
-    restauranteModel.find({
+exports.procurarT = function (req, res) {
+    transporteModel.find({
         nome: req.params.nom
-    }).exec(function (err, restaurante) {
+    }).exec(function (err, transporte) {
         if (err) {
             return console.log(err);
         }
-        return res.json(restaurante);
+        return res.json(transporte);
     });
 }
 
-exports.modificarR = function (req, res) {
-    restauranteModel.update({
+exports.modificarT = function (req, res) {
+    transporteModel.update({
         _id: req.params.id
     }, {
         tipo: req.body.tipo,
         nome: req.body.nome,
-        endereco: req.body.endereco,
         telefone: req.body.telefone,
         descricao: req.body.descricao
     }).exec(function (err) {
@@ -56,8 +53,8 @@ exports.modificarR = function (req, res) {
     });
 }
 
-exports.excluirR = function (req, res) {
-    restauranteModel.remove({
+exports.excluirT = function (req, res) {
+    transporteModel.remove({
         nome: req.params.nom
     }).exec(function (err) {
         if (err) {

@@ -33,4 +33,16 @@ function init() {
         descricao: String
     });
     restauranteModel = mongoose.model('Restaurante', schema);
+
+    // Esquemas de Transportes
+    schema = new mongoose.Schema({
+        tipo: String,
+        nome: {
+            type: String,
+            unique: true
+        },
+        telefone: String,
+        descricao: String
+    });
+    transporteModel = mongoose.model('Transporte', schema);
 }
