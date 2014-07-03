@@ -1,22 +1,24 @@
-//FUNCOES de CRUD para Pontos Turisticos
 banco = require('./dB.js'),
+//Funções de  CRUD para Restaurantes
 
-exports.listar = function (req, res) {
-    pontoModel.find().exec(function (err, ponto) {
+exports.listarR = function (req, res) {
+    restauranteModel.find().exec(function (err, restaurante) {
         if (err) {
             return console.log(err);
         }
-        return res.json(ponto);
+        return res.json(restaurante);
     });
 }
 
-exports.gravar = function (req, res) {
-    var novoPonto = new pontoModel({
+exports.gravarR = function (req, res) {
+    var novoRestautante = new restauranteModel({
+        tipo: req.body.tipo,
         nome: req.body.nome,
         endereco: req.body.endereco,
+        telefone: req.body.telefone,
         descricao: req.body.descricao
     });
-    novoPonto.save(function (err) {
+    novoRestautante.save(function (err) {
         if (err) {
             callback(err);
         } else {
@@ -25,23 +27,25 @@ exports.gravar = function (req, res) {
     });
 }
 
-exports.procurar = function (req, res) {
-    pontoModel.find({
+exports.procurarR = function (req, res) {
+    restauranteModel.find({
         nome: req.params.nom
-    }).exec(function (err, ponto) {
+    }).exec(function (err, restaurante) {
         if (err) {
             return console.log(err);
         }
-        return res.json(ponto);
+        return res.json(restaurante);
     });
 }
 
-exports.modificar = function (req, res) {
-    pontoModel.update({
+exports.modificarR = function (req, res) {
+    restauranteModel.update({
         _id: req.params.id
     }, {
+        tipo: req.body.tipo,
         nome: req.body.nome,
         endereco: req.body.endereco,
+        telefone: req.body.telefone,
         descricao: req.body.descricao
     }).exec(function (err) {
         if (err) {
@@ -52,8 +56,8 @@ exports.modificar = function (req, res) {
     });
 }
 
-exports.excluir = function (req, res) {
-    pontoModel.remove({
+exports.excluirR = function (req, res) {
+    restauranteModel.remove({
         nome: req.params.nom
     }).exec(function (err) {
         if (err) {

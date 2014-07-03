@@ -2,7 +2,8 @@ if (!process.env.NODE_ENV) process.env.NODE_ENV = 'development'
 
 var express = require('express'),
     routes = require('../routes'),
-    ponto = require('../dados/dBFuncoes.js');
+    ponto = require('../dados/dBFuncoes.js'),
+    restaurante = require('../dados/dBFuncoesR.js');
 
 var app = module.exports = express.createServer();
 
@@ -27,6 +28,7 @@ app.configure('production', function () {
 });
 
 // Rotas do Sistema
+//Rotas dos pontos turisticos
 app.get('/', routes.index);
 app.get('/novo', routes.novo);
 app.post('/criar', routes.criar);
@@ -35,6 +37,16 @@ app.put('/modificar/:id', routes.modificar);
 app.delete('/excluir/:nom', routes.excluir);
 app.get('/lista/ponto', ponto.listar);
 app.get('/lista/ponto/:nom', ponto.procurar);
+
+// Rotas dos restaurantes
+app.get('/R', routes.indexR);
+app.get('/novoR', routes.novoR);
+app.post('/criarR', routes.criarR);
+app.get('/editarR/:nom', routes.editarR);
+app.put('/modificarR/:id', routes.modificarR);
+app.delete('/excluirR/:nom', routes.excluirR);
+app.get('/lista/restaurante', restaurante.listarR);
+app.get('/lista/restaurante/:nom', restaurante.procurarR);
 
 
 app.listen(3000);

@@ -1,0 +1,81 @@
+<! DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Server App Hayô - Pontos Turísticos</title>
+    <!-- deixando o App responsivo -->
+    <meta name="viewport" content="width=device-width, user-scalable=no" />
+    <link rel="stylesheet" href="/css/restaurantes.css">
+    <link rel="stylesheet" href="/css/bootstrap.css">
+    <script src="/js/angular.min.js"></script>
+    <script src="/js/controllers.js"></script>
+
+</head>
+
+<body ng-app ng-controller="NovoCtrlR">
+    <figure id="img-home" class="imghome">
+        <img src="../public/img/imghome.jpg">
+    </figure>
+    <ul id="lst_cadastro" class="lst-cadastro">
+        <a id="menu_home" class="menu" href="index.html">
+            <li>☼</li>
+        </a>
+        <a id="menu_pontosturisticos" class="menu" href="../">
+            <li>Pontos Turísticos</li>
+        </a>
+        <a id="menu_hospedagem" class="menu" href="../public/hospedagem.html">
+            <li>Hospedagens</li>
+        </a>
+        <a id="menu_restaurantes" class="menu" href="../R">
+            <li>Restaurantes</li>
+        </a>
+        <a id="menu_transportes" class="menu" href="../public/transportes.html">
+            <li>Transportes</li>
+        </a>
+        <a id="menu_utilidadepublica" class="menu" href="../public/utilidadepublica.html">
+            <li>Utilidades Públicas</li>
+        </a>
+    </ul>
+
+    <form ng-model="restaurante" name="restauranteform">
+        <fieldset>
+
+            <div id="tipo">Tipo:
+                <select name="tipo" ng-model="restaurante.tipo">
+                    <option value="Quiosques">Quiosques</option>
+                    <option value="Comida Caseira">Comida Caseira</option>
+                    <option value="Culinaria Especializada">Culinária Especializada</option>
+                    <option value="Comida Tipica">Comida Típica</option>
+                </select>
+            </div>
+
+            <label for="r_nome">
+                <p>Nome:
+                    <input type="text" required name="nome" id="r_nome" ng-model="restaurante.nome" placeholder="Nome do Restaurante" size="350" />
+            </label>
+            </p>
+            <label for="r_endereco">
+                <p>Endereço:
+                    <input type="text" required name="endereco" id="r_endereco" ng-model="restaurante.endereco" placeholder="Rua, Av, bairo, ..." size="147" />
+            </label>
+            </p>
+            <label for="r_telefone">
+                <p>Telefone:
+                    <input type="text" required name="telefone" id="r_telefone" ng-model="restaurante.telefone" placeholder="0000-0000" size="147" />
+                </p>
+            </label>
+            <label for="r_textarea">
+                <p>Descrição:</p>
+                <textarea id="textarea" required name="r_descricao" ng-model="restaurante.descricao" placeholder="Faça uma breve descriçao sobre Restaurantes..." maxlength="300"></textarea>
+            </label>
+            <div class="form-actions">
+                <button ng-click="criarR()" class="btn btn-primary">Salvar</button>
+                <a href="/R" class="btn">Voltar</a>
+            </div>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>

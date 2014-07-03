@@ -19,4 +19,18 @@ function init() {
         descricao: String
     });
     pontoModel = mongoose.model('Ponto', schema);
+
+
+    // Esquemas de Restaurantes
+    schema = new mongoose.Schema({
+        tipo: String,
+        nome: {
+            type: String,
+            unique: true
+        },
+        endereco: String,
+        telefone: String,
+        descricao: String
+    });
+    restauranteModel = mongoose.model('Restaurante', schema);
 }
