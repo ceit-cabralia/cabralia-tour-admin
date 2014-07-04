@@ -66,7 +66,7 @@ function EditarCtrl($scope, $http) {
     }
 }
 
-// CRUD de CONTROLLERS para Restaurantes    
+// CRUD de CONTROLLERS para Restaurantes
 
 function ListaCtrlR($scope, $http) {
     $scope.nome = '';
@@ -134,29 +134,27 @@ function EditarCtrlR($scope, $http) {
         })
     }
 }
+// CRUD de CONTROLLERS para hospedagens
 
-
-// CRUD de CONTROLLERS para Restaurantes    
-
-function ListaCtrlT($scope, $http) {
+function ListaCtrlH($scope, $http) {
     $scope.nome = '';
 
-    $http.get('/lista/transporte').success(function (data) {
-        $scope.transportes = data;
+    $http.get('/lista/hospedagem').success(function (data) {
+        $scope.hospedagens = data;
     })
 
-    $scope.select = function (transporte) {
-        $scope.nome = transporte.nome;
+    $scope.select = function (hospedagem) {
+        $scope.nome = hospedagem.nome;
     }
 
-    $scope.excluirT = function () {
+    $scope.excluirH = function () {
         if ($scope.nome != '') {
-            $http.delete('/excluirT/' + $scope.nome)
+            $http.delete('/excluirH/' + $scope.nome)
                 .success(function (data) {
                     if (data == 'err') {
-                        alert("Erro na Exclusão do Transporte");
+                        alert("Erro na Exclusão de hospedagem");
                     } else {
-                        alert("Transporte Excluido...");
+                        alert("hospedagem Excluido...");
                     }
                     document.location.reload(true);
                 })
@@ -164,41 +162,42 @@ function ListaCtrlT($scope, $http) {
     }
 }
 
-function NovoCtrlT($scope, $http) {
-    $scope.criarT = function () {
-        $http.post('/criarT', $scope.transporte)
+function NovoCtrlH($scope, $http) {
+    $scope.criarH = function () {
+        $http.post('/criarH', $scope.hospedagem)
             .success(function (data) {
                 if (data == 'err') {
                     alert("Erro de gravação");
                 } else {
-                    alert("Transporte cadastrado...");
+                    alert("hospedagem cadastrado...");
                 }
-                $scope.transporte = {};
+                $scope.hospedagem = {};
             })
     }
 }
 
-function EditarCtrlT($scope, $http) {
+function EditarCtrlH($scope, $http) {
     var caminho = document.URL;
     $scope._id = 0;
-    $scope.transporte = {};
+    $scope.hospedagem = {};
 
     caminho = caminho.substring(caminho.lastIndexOf('/'));
-    $http.get('/lista/transporte' + caminho).success(function (data) {
+    $http.get('/lista/hospedagem' + caminho).success(function (data) {
         $scope._id = data[0]._id;
-        $scope.transporte.tipo = data[0].tipo;
-        $scope.transporte.nome = data[0].nome;
-        $scope.transporte.telefone = data[0].telefone;
-        $scope.transporte.descricao = data[0].descricao;
+        $scope.hospedagem.tipo = data[0].tipo;
+        $scope.hospedagem.nome = data[0].nome;
+        $scope.hospedagem.endereco = data[0].endereco;
+        $scope.hospedagem.telefone = data[0].telefone;
+        $scope.hospedagem.descricao = data[0].descricao;
     })
 
-    $scope.modificarT = function () {
-        $http.put('/modificarT/' + $scope._id, $scope.transporte).success(function (data) {
+    $scope.modificarH = function () {
+        $http.put('/modificarH/' + $scope._id, $scope.hospedagem).success(function (data) {
             if (data == 'err') {
                 alert("Erro na Alteração");
             } else {
-                alert("Transporte Alterado...");
-                window.location = '/T';
+                alert("hospedagem Alterado...");
+                window.location = '/H';
             }
         })
     }

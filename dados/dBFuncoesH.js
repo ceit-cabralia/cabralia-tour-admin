@@ -1,22 +1,24 @@
-//FUNCOES de CRUD para Pontos Turisticos
 banco = require('./dB.js'),
+//Funções de  CRUD para Hospedagens
 
-exports.listar = function (req, res) {
-    pontoModel.find().exec(function (err, ponto) {
+exports.listarH = function (req, res) {
+    hospedagemModel.find().exec(function (err, hospedagem) {
         if (err) {
             return console.log(err);
         }
-        return res.json(ponto);
+        return res.json(hospedagem);
     });
 }
 
-exports.gravar = function (req, res) {
-    var novoPonto = new pontoModel({
+exports.gravarH = function (req, res) {
+    var novoHospedagem = new hospedagemModel({
+        tipo: req.body.tipo,
         nome: req.body.nome,
         endereco: req.body.endereco,
+        telefone: req.body.telefone,
         descricao: req.body.descricao
     });
-    novoPonto.save(function (err) {
+    novoHospedagem.save(function (err) {
         if (err) {
             callback(err);
         } else {
@@ -25,23 +27,25 @@ exports.gravar = function (req, res) {
     });
 }
 
-exports.procurar = function (req, res) {
-    pontoModel.find({
+exports.procurarH = function (req, res) {
+    hospedagemModel.find({
         nome: req.params.nom
-    }).exec(function (err, ponto) {
+    }).exec(function (err, hospedagem) {
         if (err) {
             return console.log(err);
         }
-        return res.json(ponto);
+        return res.json(hospedagem);
     });
 }
 
-exports.modificar = function (req, res) {
-    pontoModel.update({
+exports.modificarH = function (req, res) {
+    hospedagemModel.update({
         _id: req.params.id
     }, {
+        tipo: req.body.tipo,
         nome: req.body.nome,
         endereco: req.body.endereco,
+        telefone: req.body.telefone,
         descricao: req.body.descricao
     }).exec(function (err) {
         if (err) {
@@ -52,8 +56,8 @@ exports.modificar = function (req, res) {
     });
 }
 
-exports.excluir = function (req, res) {
-    pontoModel.remove({
+exports.excluirH = function (req, res) {
+    hospedagemModel.remove({
         nome: req.params.nom
     }).exec(function (err) {
         if (err) {
