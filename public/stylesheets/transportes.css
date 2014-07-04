@@ -1,85 +1,97 @@
-*{
-padding: 0.35%;
+* {
+    padding: 0.35%;
 }
-
 a {
-color: #FFF;
-text-decoration: none;
+    color: #FFF;
+    text-decoration: none;
 }
-.menu{
-font-size: 160%;
-background-color: #000;
-display: inline-block;
-text-align: center;
-width: 17.72%;
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px;
-list-style: none;
+.menu {
+    font-size: 160%;
+    background-color: #000;
+    display: inline-block;
+    text-align: center;
+    width: 17.72%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    list-style: none;
 }
 #menu_transportes {
-border-left: 1px solid black;
-border-right: 1px solid black;
-border-top: 1px solid black;
-background-color: #DEB887;
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;
-border-bottom-left-radius: 0px;
-border-bottom-right-radius: 0px;
-height: 5.5%;
-color: black;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    background-color: #DEB887;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    height: 5.5%;
+    color: black;
 }
 #menu_transportes:hover {
-border-left: 1px solid black;
-border-right: 1px solid black;
-border-top: 1px solid black;
-border-bottom:1px solid #DEB887;
-background-color: #DEB887}
-
-#menu_home{
-border: 1px solid black;
-color: #FFF;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+    border-top: 1px solid black;
+    border-bottom: 1px solid #DEB887;
+    background-color: #DEB887
+}
+#menu_home {
+    border: 1px solid black;
+    color: #FFF;
     width: 4%;
-height: 4.8%;
-border-top-left-radius: 0px;
-border-top-right-radius: 0px;
-border-bottom-left-radius: 5px;
-border-bottom-right-radius: 5px;
-
+    height: 4.8%;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
-body {background-color: #a39a9a;
+body {
+    background-color: #a39a9a;
 }
-
 .menu:hover {
-background-color: #9d9d9d;
+    background-color: #9d9d9d;
 }
-
 #lst_cadastro {
-margin-left: 2px;
-margin-top: -2.2%;
-background-color: rgba(164, 35, 247, 0.03);}
+    margin-left: 2px;
+    margin-top: -2.2%;
+    background-color: rgba(164, 35, 247, 0.03);
+}
 .imghome {
-margin-top: -3%;
-margin-left: -2px;
+    margin-top: -3%;
+    margin-left: -2px;
 }
 textarea {
-width: 99.9%;
-height: 46.5%;
-margin-top: -10px;}
-p{
-margin-top: 4px;
+    width: 99.9%;
+    height: 46.5%;
+    margin-top: -10px;
+}
+p {
+    margin-top: 4px;
 }
 .tipo_transportes {
-margin-top: 20px;
-margin-left: 2px;}
-form{
-border-bottom-right-radius: 5px;
-border-bottom-left-radius: 5px;
-height: 67%;
-width: 97%;
-border: 1px solid black;
-background-color:#DEB887;
-margin-top: -21px;
-margin-right:  1.66%;
-margin-left: 0.5%;}
+    margin-top: 20px;
+    margin-left: 2px;
+}
+form {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 67%;
+    width: 97%;
+    border: 1px solid black;
+    background-color: #DEB887;
+    margin-top: -21px;
+    margin-right: 1.66%;
+    margin-left: 0.5%;
+}
+.container {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+    height: 67%;
+    width: 97%;
+    border: 1px solid black;
+    background-color: #DEB887;
+    margin-top: -21px;
+    margin-right: 1.66%;
+    margin-left: 0.5%;
+}
