@@ -1,6 +1,6 @@
 mongoose = require('mongoose');
 
-// Conex�o com o Banco
+// Conex�o com o Banco 
 
 mongoose.connect('mongodb://localhost:27017/hayoDB');
 var db = mongoose.connection;
@@ -34,17 +34,15 @@ function init() {
     });
     restauranteModel = mongoose.model('Restaurante', schema);
 
-
-    //Esquemas de Hospedagens
+    // Esquemas de Transportes
     schema = new mongoose.Schema({
         tipo: String,
         nome: {
             type: String,
             unique: true
         },
-        endereco: String,
         telefone: String,
         descricao: String
     });
-    hospedagemModel = mongoose.model('Hospedagem', schema);
+    transporteModel = mongoose.model('Transporte', schema);
 }
