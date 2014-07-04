@@ -11,14 +11,14 @@ exports.listarR = function (req, res) {
 }
 
 exports.gravarR = function (req, res) {
-    var novoRestaurante = new restauranteModel({
+    var novoRestautante = new restauranteModel({
         tipo: req.body.tipo,
         nome: req.body.nome,
         endereco: req.body.endereco,
         telefone: req.body.telefone,
         descricao: req.body.descricao
     });
-    novoRestaurante.save(function (err) {
+    novoRestautante.save(function (err) {
         if (err) {
             callback(err);
         } else {

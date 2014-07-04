@@ -4,7 +4,7 @@ var express = require('express'),
     routes = require('../routes'),
     ponto = require('../dados/dBFuncoes.js'),
     restaurante = require('../dados/dBFuncoesR.js'),
-    transporte = require('../dados/dBFuncoesT.js');
+    hospedagem = require('../dados/dBFuncoesH.js');
 
 var app = module.exports = express.createServer();
 
@@ -49,16 +49,15 @@ app.delete('/excluirR/:nom', routes.excluirR);
 app.get('/lista/restaurante', restaurante.listarR);
 app.get('/lista/restaurante/:nom', restaurante.procurarR);
 
-
-// Rotas dos Transportes
-app.get('/T', routes.indexT);
-app.get('/novoT', routes.novoT);
-app.post('/criarT', routes.criarT);
-app.get('/editarT/:nom', routes.editarT);
-app.put('/modificarT/:id', routes.modificarT);
-app.delete('/excluirT/:nom', routes.excluirT);
-app.get('/lista/transporte', transporte.listarT);
-app.get('/lista/transporte/:nom', transporte.procurarT);
+// Rotas dos hospedagem
+app.get('/H', routes.indexH);
+app.get('/novoH', routes.novoH);
+app.post('/criarH', routes.criarH);
+app.get('/editarH/:nom', routes.editarH);
+app.put('/modificarH/:id', routes.modificarH);
+app.delete('/excluirH/:nom', routes.excluirH);
+app.get('/lista/hospedagem', hospedagem.listarH);
+app.get('/lista/hospedagem/:nom', hospedagem.procurarH);
 
 app.listen(3000);
 console.log("Servidor está executando na porta %d em modo de %s", app.address().port, app.settings.env);
