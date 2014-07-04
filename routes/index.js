@@ -1,7 +1,7 @@
 var fs = require('fs'),
     restaurante = require('../dados/dBFuncoesR.js'),
     ponto = require('../dados/dBFuncoes.js'),
-    hospedagem = require('../dados/dBFuncoesH.js');
+    transporte = require('../dados/dBFuncoesT.js');
 
 exports.index = function (req, res) {
     fs.readFile('../views/pontos.html', function (error, content) {
@@ -113,10 +113,11 @@ exports.editarR = function (req, res) {
     });
 };
 
-// ROTAS de Hospedagens
 
-exports.indexH = function (req, res) {
-    fs.readFile('../views/hospedagem.html', function (error, content) {
+// ROTAS de Transportes
+
+exports.indexT = function (req, res) {
+    fs.readFile('../views/transportes.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -129,8 +130,8 @@ exports.indexH = function (req, res) {
     });
 };
 
-exports.novoH = function (req, res) {
-    fs.readFile('../views/novohospedagem.html', function (error, content) {
+exports.novoT = function (req, res) {
+    fs.readFile('../views/novotransporte.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -143,20 +144,20 @@ exports.novoH = function (req, res) {
     });
 };
 
-exports.criarH = function (req, res) {
-    hospedagem.gravarH(req, res);
+exports.criarT = function (req, res) {
+    transporte.gravarT(req, res);
 };
 
-exports.modificarH = function (req, res) {
-    hospedagem.modificarH(req, res);
+exports.modificarT = function (req, res) {
+    transporte.modificarT(req, res);
 };
 
-exports.excluirH = function (req, res) {
-    hospedagem.excluirH(req, res);
+exports.excluirT = function (req, res) {
+    transporte.excluirT(req, res);
 };
 
-exports.editarH = function (req, res) {
-    fs.readFile('../views/editarhospedagem.html', function (error, content) {
+exports.editarT = function (req, res) {
+    fs.readFile('../views/editartransporte.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
