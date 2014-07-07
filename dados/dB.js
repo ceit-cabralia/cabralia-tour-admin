@@ -3,6 +3,9 @@ mongoose = require('mongoose');
 // Conexao com o Banco
 
 mongoose.connect('mongodb://localhost:27017/hayoDB');
+
+
+
 var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function calbckcallback() {
@@ -16,6 +19,7 @@ function init() {
             unique: true
         },
         endereco: String,
+        imagens: String,
         descricao: String
     });
     pontoModel = mongoose.model('Ponto', schema);
@@ -28,6 +32,7 @@ function init() {
             type: String,
             unique: true
         },
+        imagens: String,
         endereco: String,
         telefone: String,
         descricao: String
@@ -41,6 +46,7 @@ function init() {
             type: String,
             unique: true
         },
+        imagens: String,
         telefone: String,
         descricao: String
     });
@@ -54,6 +60,7 @@ function init() {
             unique: true
         },
         endereco: String,
+        imagens: String,
         telefone: String,
         descricao: String
     });
@@ -67,8 +74,23 @@ function init() {
             unique: true
         },
         endereco: String,
+        imagens: String,
         telefone: String,
         descricao: String
     });
     hospedagemModel = mongoose.model('Hospedagem', schema);
+
+    //Esquemas de SOBRE
+
+    schema = new mongoose.Schema({
+
+        nome: {
+            type: String,
+            unique: true
+        },
+
+        imagens: String
+    });
+    sobreModel = mongoose.model('Sobre', schema);
+
 }

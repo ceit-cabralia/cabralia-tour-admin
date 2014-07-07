@@ -14,6 +14,7 @@ exports.gravar = function (req, res) {
     var novoPonto = new pontoModel({
         nome: req.body.nome,
         endereco: req.body.endereco,
+        imagens: req.body.imagens,
         descricao: req.body.descricao
     });
     novoPonto.save(function (err) {
@@ -42,6 +43,7 @@ exports.modificar = function (req, res) {
     }, {
         nome: req.body.nome,
         endereco: req.body.endereco,
+        imagens: req.body.imagens,
         descricao: req.body.descricao
     }).exec(function (err) {
         if (err) {

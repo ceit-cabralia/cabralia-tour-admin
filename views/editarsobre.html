@@ -3,17 +3,17 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Server App Hayô - Pontos Turisticos</title>
+    <title>Server App Hayô - Sobre Cabrália</title>
     <!-- deixando o App responsivo -->
     <meta name="viewport" content="width=device-width, user-scalable=no" />
-    <link rel="stylesheet" href="/css/pontosturisticos.css">
+    <link rel="stylesheet" href="/css/detalhe.css">
     <link rel="stylesheet" href="/css/bootstrap.css">
     <script src="/js/angular.min.js"></script>
     <script src="/js/controllers.js"></script>
 
 </head>
 
-<body ng-app ng-controller="EditarCtrl">
+<body ng-app ng-controller="EditarCtrlS">
 
     <figure id="img-home" class="imghome">
         <img src="/img/imghome.jpg">
@@ -39,28 +39,19 @@
         </a>
     </ul>
 
-    <form ng-model="ponto" name="pontoform">
+    <form ng-model="sobre" name="sobreform">
         <fieldset>
-
-            <strong>Nome:</strong>
-            <input type="text" required name="nome" id="p_nome" placeholder="{{ponto.nome}}" ng-model="ponto.nome" size="350" />
-
-
-            <strong><p>Endereço:</strong>
-            <input type="text" required name="endereco" id="p_endereco" placeholder="{{ponto.endereco}}" ng-model="ponto.endereco" size="147" />
-
-            </p>
-
             <strong>Imagens:</strong>
-            <input type="text" required name="imagens" id="p_imagens" placeholder="{{ponto.imagens}}" ng-model="ponto.imagens" size="147 " />
+            <input type="text" required name="imagens" id="s_imagens" placeholder="{{sobre.imagens}}" ng-model="sobre.imagens" size="147 " />
 
 
-            <strong> <p>Descrição:</strong>
-            <textarea id="textarea" required name="p_descricao" placeholder="{{ponto.descricao}}" ng-model="ponto.descricao" " maxlength="300 "></textarea></p>
-            
+
+            <strong><p>Descrição:</strong>
+            <textarea id="textarea " required name="descricao " placeholder="{{sobre.nome}} " ng-model="sobre.nome " maxlength="300 " /></textarea>
+            </p>
             <div class="form-actions ">
-                <button ng-click="modificar() " class="btn btn-primary ">Modificar</button>
-                <a href="/ " class="btn ">Voltar</a>
+                <button ng-click="modificarS() " class="btn btn-primary ">Modificar</button>
+                <a href="/S " class="btn ">Voltar</a>
             </div>
         </fieldset>
     </form>

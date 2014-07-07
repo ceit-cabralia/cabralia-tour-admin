@@ -16,6 +16,7 @@ exports.gravarR = function (req, res) {
         nome: req.body.nome,
         endereco: req.body.endereco,
         telefone: req.body.telefone,
+        imagens: req.body.imagens,
         descricao: req.body.descricao
     });
     novoRestaurante.save(function (err) {
@@ -46,6 +47,7 @@ exports.modificarR = function (req, res) {
         nome: req.body.nome,
         endereco: req.body.endereco,
         telefone: req.body.telefone,
+        imagens: req.body.imagens,
         descricao: req.body.descricao
     }).exec(function (err) {
         if (err) {

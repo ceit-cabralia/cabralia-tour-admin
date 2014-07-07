@@ -19,22 +19,22 @@
         <img src="/img/imghome.jpg">
     </figure>
     <ul id="lst_cadastro" class="lst-cadastro">
-        <a id="menu_home" class="menu" href="../public/index.html">
+        <a id="menu_home" class="menu" href="/S">
             <li>☼</li>
         </a>
-        <a id="menu_pontosturisticos" class="menu" href="../">
+        <a id="menu_pontosturisticos" class="menu" href="/">
             <li>Pontos Turísticos</li>
         </a>
-        <a id="menu_hospedagem" class="menu" href="../H">
+        <a id="menu_hospedagem" class="menu" href="/H">
             <li>Hospedagens</li>
         </a>
-        <a id="menu_restaurantes" class="menu" href="../R">
+        <a id="menu_restaurantes" class="menu" href="/R">
             <li>Restaurantes</li>
         </a>
-        <a id="menu_transportes" class="menu" href="../T">
+        <a id="menu_transportes" class="menu" href="/T">
             <li>Transportes</li>
         </a>
-        <a id="menu_utilidadepublica" class="menu" href="../U">
+        <a id="menu_utilidadepublica" class="menu" href="/U">
             <li>Utilidades Públicas</li>
         </a>
     </ul>
@@ -60,12 +60,12 @@
             <thead>
                 <th>Nome</th>
                 <th>Endereço</th>
-                <th>Descriçao</th>
+
             </thead>
             <tr ng-repeat="ponto in pontos | filter:criteria | orderBy:'nome'" ng-click="select(ponto)" ng-class="{'info': nome == ponto.nome}">
                 <td>{{ponto.nome}}</td>
                 <td>{{ponto.endereco}}</td>
-                <td>{{ponto.descricao}}</td>
+
             </tr>
         </table>
     </div>

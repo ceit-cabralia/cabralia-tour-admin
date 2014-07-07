@@ -19,7 +19,7 @@ function ListaCtrl($scope, $http) {
                     if (data == 'err') {
                         alert("Erro na Exclusão");
                     } else {
-                        alert("Ponto Turistico Excluido..");
+                        alert("Ponto Turistico excluido com sucesso.");
                     }
                     document.location.reload(true);
                 })
@@ -34,7 +34,7 @@ function NovoCtrl($scope, $http) {
                 if (data == 'err') {
                     alert("Erro de gravação");
                 } else {
-                    alert("Ponto Turistico cadastrado...");
+                    alert("Ponto Turistico cadastrado com sucesso.");
                 }
                 $scope.ponto = {};
             })
@@ -51,6 +51,7 @@ function EditarCtrl($scope, $http) {
         $scope._id = data[0]._id;
         $scope.ponto.nome = data[0].nome;
         $scope.ponto.endereco = data[0].endereco;
+        $scope.ponto.imagens = data[0].imagens;
         $scope.ponto.descricao = data[0].descricao;
     })
 
@@ -59,7 +60,7 @@ function EditarCtrl($scope, $http) {
             if (data == 'err') {
                 alert("Erro na Alteração");
             } else {
-                alert("Ponto Turistico Alterado..");
+                alert("Ponto Turistico alterado com sucesso.");
                 window.location = '/';
             }
         })
@@ -86,7 +87,7 @@ function ListaCtrlR($scope, $http) {
                     if (data == 'err') {
                         alert("Erro na Exclusão de Restaurante");
                     } else {
-                        alert("Restaurante Excluido...");
+                        alert("Restaurante excluido com sucesso.");
                     }
                     document.location.reload(true);
                 })
@@ -101,7 +102,7 @@ function NovoCtrlR($scope, $http) {
                 if (data == 'err') {
                     alert("Erro de gravação");
                 } else {
-                    alert("Restaurante cadastrado...");
+                    alert("Restaurante cadastrado com sucesso...");
                 }
                 $scope.restaurante = {};
             })
@@ -119,6 +120,7 @@ function EditarCtrlR($scope, $http) {
         $scope.restaurante.tipo = data[0].tipo;
         $scope.restaurante.nome = data[0].nome;
         $scope.restaurante.endereco = data[0].endereco;
+        $scope.restaurante.imagens = data[0].imagens;
         $scope.restaurante.telefone = data[0].telefone;
         $scope.restaurante.descricao = data[0].descricao;
     })
@@ -128,7 +130,7 @@ function EditarCtrlR($scope, $http) {
             if (data == 'err') {
                 alert("Erro na Alteração");
             } else {
-                alert("Restaurante Alterado...");
+                alert("Restaurante alterado com sucesso.");
                 window.location = '/R';
             }
         })
@@ -155,7 +157,7 @@ function ListaCtrlT($scope, $http) {
                     if (data == 'err') {
                         alert("Erro na Exclusão do Transporte");
                     } else {
-                        alert("Transporte Excluido...");
+                        alert("Transporte excluido com sucesso.");
                     }
                     document.location.reload(true);
                 })
@@ -170,7 +172,7 @@ function NovoCtrlT($scope, $http) {
                 if (data == 'err') {
                     alert("Erro de gravação");
                 } else {
-                    alert("Transporte cadastrado...");
+                    alert("Transporte cadastrado com sucesso.");
                 }
                 $scope.transporte = {};
             })
@@ -188,6 +190,7 @@ function EditarCtrlT($scope, $http) {
         $scope.transporte.tipo = data[0].tipo;
         $scope.transporte.nome = data[0].nome;
         $scope.transporte.telefone = data[0].telefone;
+        $scope.transporte.imagens = data[0].imagens;
         $scope.transporte.descricao = data[0].descricao;
     })
 
@@ -196,7 +199,7 @@ function EditarCtrlT($scope, $http) {
             if (data == 'err') {
                 alert("Erro na Alteração");
             } else {
-                alert("Transporte Alterado...");
+                alert("Transporte alterado com sucesso.");
                 window.location = '/T';
             }
         })
@@ -220,9 +223,9 @@ function ListaCtrlU($scope, $http) {
             $http.delete('/excluirU/' + $scope.nome)
                 .success(function (data) {
                     if (data == 'err') {
-                        alert("Erro na Exclusão da Utilidadae Pública");
+                        alert("Erro na Exclusão da Utilidadade Pública");
                     } else {
-                        alert("Utilidade Pública Excluido...");
+                        alert("Utilidade Pública cxcluido com sucesso.");
                     }
                     document.location.reload(true);
                 })
@@ -237,7 +240,7 @@ function NovoCtrlU($scope, $http) {
                 if (data == 'err') {
                     alert("Erro de Cadastro da Utilidade Pública");
                 } else {
-                    alert("Utilidadae Pública cadastrado...");
+                    alert("Utilidade Pública cadastrado com sucesso.");
                 }
                 $scope.utilidade = {};
             })
@@ -255,6 +258,7 @@ function EditarCtrlU($scope, $http) {
         $scope.utilidade.tipo = data[0].tipo;
         $scope.utilidade.nome = data[0].nome;
         $scope.utilidade.endereco = data[0].endereco;
+        $scope.utilidade.imagens = data[0].imagens;
         $scope.utilidade.telefone = data[0].telefone;
         $scope.utilidade.descricao = data[0].descricao;
     })
@@ -264,7 +268,7 @@ function EditarCtrlU($scope, $http) {
             if (data == 'err') {
                 alert("Erro na Alteração da utilidade Pública");
             } else {
-                alert("Utilidade Pública Alterado...");
+                alert("Utilidade Pública alterado com sucesso.");
                 window.location = '/U';
             }
         })
@@ -291,7 +295,7 @@ function ListaCtrlH($scope, $http) {
                     if (data == 'err') {
                         alert("Erro na Exclusão de hospedagem");
                     } else {
-                        alert("hospedagem Excluido...");
+                        alert("hospedagem excluido com sucesso.");
                     }
                     document.location.reload(true);
                 })
@@ -306,7 +310,7 @@ function NovoCtrlH($scope, $http) {
                 if (data == 'err') {
                     alert("Erro de gravação");
                 } else {
-                    alert("hospedagem cadastrado...");
+                    alert("hospedagem cadastrado com sucesso.");
                 }
                 $scope.hospedagem = {};
             })
@@ -324,6 +328,7 @@ function EditarCtrlH($scope, $http) {
         $scope.hospedagem.tipo = data[0].tipo;
         $scope.hospedagem.nome = data[0].nome;
         $scope.hospedagem.endereco = data[0].endereco;
+        $scope.hospedagem.imagens = data[0].imagens;
         $scope.hospedagem.telefone = data[0].telefone;
         $scope.hospedagem.descricao = data[0].descricao;
     })
@@ -333,8 +338,74 @@ function EditarCtrlH($scope, $http) {
             if (data == 'err') {
                 alert("Erro na Alteração");
             } else {
-                alert("hospedagem Alterado...");
+                alert("hospedagem alterado com sucesso.");
                 window.location = '/H';
+            }
+        })
+    }
+}
+// CRUD de CONTROLLERS para Sobre
+
+function ListaCtrlS($scope, $http) {
+    $scope.nome = '';
+
+    $http.get('/lista/sobre').success(function (data) {
+        $scope.sobres = data;
+    })
+
+    $scope.select = function (sobre) {
+        $scope.nome = sobre.nome;
+    }
+
+    $scope.excluirS = function () {
+        if ($scope.nome != '') {
+            $http.delete('/excluirS/' + $scope.nome)
+                .success(function (data) {
+                    if (data == 'err') {
+                        alert("Erro na Exclusão do Sobre");
+                    } else {
+                        alert("Sobre excluido com sucesso.");
+                    }
+                    document.location.reload(true);
+                })
+        }
+    }
+}
+
+function NovoCtrlS($scope, $http) {
+    $scope.criarS = function () {
+        $http.post('/criarS', $scope.sobre)
+            .success(function (data) {
+                if (data == 'err') {
+                    alert("Erro de gravação");
+                } else {
+                    alert("Sobre cadastrado com sucesso.");
+                }
+                $scope.sobre = {};
+            })
+    }
+}
+
+function EditarCtrlS($scope, $http) {
+    var caminho = document.URL;
+    $scope._id = 0;
+    $scope.sobre = {};
+
+    caminho = caminho.substring(caminho.lastIndexOf('/'));
+    $http.get('/lista/sobre' + caminho).success(function (data) {
+        $scope._id = data[0]._id;
+
+        $scope.sobre.imagens = data[0].imagens;
+        $scope.sobre.nome = data[0].nome;
+    })
+
+    $scope.modificarS = function () {
+        $http.put('/modificarS/' + $scope._id, $scope.sobre).success(function (data) {
+            if (data == 'err') {
+                alert("Erro na Alteração");
+            } else {
+                alert("Sobre alterado com sucesso.");
+                window.location = '/S';
             }
         })
     }

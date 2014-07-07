@@ -16,6 +16,7 @@ exports.gravarH = function (req, res) {
         nome: req.body.nome,
         endereco: req.body.endereco,
         telefone: req.body.telefone,
+        imagens: req.body.imagens,
         descricao: req.body.descricao
     });
     novoHospedagem.save(function (err) {
@@ -46,6 +47,7 @@ exports.modificarH = function (req, res) {
         nome: req.body.nome,
         endereco: req.body.endereco,
         telefone: req.body.telefone,
+        imagens: req.body.imagens,
         descricao: req.body.descricao
     }).exec(function (err) {
         if (err) {

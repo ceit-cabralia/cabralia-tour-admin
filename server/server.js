@@ -6,8 +6,8 @@ var express = require('express'),
     restaurante = require('../dados/dBFuncoesR.js'),
     transporte = require('../dados/dBFuncoesT.js'),
     utilidade = require('../dados/dBFuncoesU.js'),
-    hospedagem = require('../dados/dBFuncoesH.js');
-
+    hospedagem = require('../dados/dBFuncoesH.js'),
+    sobre = require('../dados/dBFuncoesS.js');
 
 var app = module.exports = express.createServer();
 
@@ -82,6 +82,18 @@ app.put('/modificarH/:id', routes.modificarH);
 app.delete('/excluirH/:nom', routes.excluirH);
 app.get('/lista/hospedagem', hospedagem.listarH);
 app.get('/lista/hospedagem/:nom', hospedagem.procurarH);
+
+
+// Rotas do Sobre
+app.get('/S', routes.indexS);
+app.get('/novoS', routes.novoS);
+app.post('/criarS', routes.criarS);
+app.get('/editarS/:nom', routes.editarS);
+app.put('/modificarS/:id', routes.modificarS);
+app.delete('/excluirS/:nom', routes.excluirS);
+app.get('/lista/sobre', sobre.listarS);
+app.get('/lista/sobre/:nom', sobre.procurarS);
+
 
 
 app.listen(3000);

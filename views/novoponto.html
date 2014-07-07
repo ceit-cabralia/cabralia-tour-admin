@@ -15,46 +15,49 @@
 
 <body ng-app ng-controller="NovoCtrl">
 
+
     <figure id="img-home" class="imghome">
-        <img src="../public/img/imghome.jpg">
+        <img src="/img/imghome.jpg">
     </figure>
     <ul id="lst_cadastro" class="lst-cadastro">
-        <a id="menu_home" class="menu" href="index.html">
+        <a id="menu_home" class="menu" href="/S">
             <li>☼</li>
         </a>
-        <a id="menu_pontosturisticos" class="menu" href="../">
+        <a id="menu_pontosturisticos" class="menu" href="/">
             <li>Pontos Turísticos</li>
         </a>
-        <a id="menu_hospedagem" class="menu" href="../H">
+        <a id="menu_hospedagem" class="menu" href="/H">
             <li>Hospedagens</li>
         </a>
-        <a id="menu_restaurantes" class="menu" href="../R">
+        <a id="menu_restaurantes" class="menu" href="/R">
             <li>Restaurantes</li>
         </a>
-        <a id="menu_transportes" class="menu" href="../T">
+        <a id="menu_transportes" class="menu" href="/T">
             <li>Transportes</li>
         </a>
-        <a id="menu_utilidadepublica" class="menu" href="../U">
+        <a id="menu_utilidadepublica" class="menu" href="/U">
             <li>Utilidades Públicas</li>
         </a>
     </ul>
 
     <form ng-model="ponto" name="pontoform">
         <fieldset>
-            <label for="p_nome">
-                <p>Nome:
-                    <input type="text" required name="nome" id="p_nome" ng-model="ponto.nome" placeholder="Nome do ponto turistico" size="350" />
-            </label>
+
+            <strong>Nome:</strong>
+            <input type="text" required name="nome" id="p_nome" ng-model="ponto.nome" placeholder="Nome do ponto turistico" size="350" />
+
+
+            <strong><p>Endereço:</strong>
+            <input type="text" required name="endereco" id="p_endereco" ng-model="ponto.endereco" placeholder="Rua, Av, bairo, ..." size="147" />
             </p>
-            <label for="p_endereco">
-                <p>Endereço:
-                    <input type="text" required name="endereco" id="p_endereco" ng-model="ponto.endereco" placeholder="Rua, Av, bairo, ..." size="147" />
-            </label>
+
+            <strong>Imagens:</strong>
+            <input type="text" required name="imagens" id="p_imagens" ng-model="ponto.imagens" placeholder="Link de sua imagem" size="147 " />
+
+
+            <strong> <p>Descrição:</strong>
+            <textarea id="textarea" required name="p_descricao" ng-model="ponto.descricao" placeholder="Faça uma breve descriçao sobre os Pontos Turisticos..." maxlength="300"></textarea>
             </p>
-            <label for="p_textarea">
-                <p>Descrição:</p>
-                <textarea id="textarea" required name="p_descricao" ng-model="ponto.descricao" placeholder="Faça uma breve descriçao sobre os Pontos Turisticos..." maxlength="300"></textarea>
-            </label>
             <div class="form-actions">
                 <button ng-click="criar()" class="btn btn-primary">Salvar</button>
                 <a href="/" class="btn">Voltar</a>

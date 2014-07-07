@@ -3,7 +3,9 @@ var fs = require('fs'),
     ponto = require('../dados/dBFuncoes.js'),
     transporte = require('../dados/dBFuncoesT.js'),
     hospedagem = require('../dados/dBFuncoesH.js'),
-    utilidade = require('../dados/dBFuncoesU.js');
+    utilidade = require('../dados/dBFuncoesU.js'),
+    sobre = require('../dados/dBFuncoesS.js');
+
 
 
 exports.index = function (req, res) {
@@ -228,6 +230,8 @@ exports.editarU = function (req, res) {
     });
 };
 
+
+
 // ROTAS de Hospedagens
 
 exports.indexH = function (req, res) {
@@ -272,6 +276,62 @@ exports.excluirH = function (req, res) {
 
 exports.editarH = function (req, res) {
     fs.readFile('../views/editarhospedagem.html', function (error, content) {
+        if (error) {
+            res.writeHead(500);
+            res.end();
+        } else {
+            res.writeHead(200, {
+                'Content-Type': 'text/html'
+            });
+            res.end(content, 'utf-8');
+        }
+    });
+};
+
+// ROTAS de Sobre
+
+exports.indexS = function (req, res) {
+    fs.readFile('../views/sobre.html', function (error, content) {
+        if (error) {
+            res.writeHead(500);
+            res.end();
+        } else {
+            res.writeHead(200, {
+                'Content-Type': 'text/html'
+            });
+            res.end(content, 'utf-8');
+        }
+    });
+};
+
+exports.novoS = function (req, res) {
+    fs.readFile('../views/novosobre.html', function (error, content) {
+        if (error) {
+            res.writeHead(500);
+            res.end();
+        } else {
+            res.writeHead(200, {
+                'Content-Type': 'text/html'
+            });
+            res.end(content, 'utf-8');
+        }
+    });
+};
+
+exports.criarS = function (req, res) {
+    sobre.gravarS(req, res);
+};
+
+exports.modificarS = function (req, res) {
+    sobre.modificarS(req, res);
+};
+
+exports.excluirS = function (req, res) {
+    sobre.excluirS(req, res);
+};
+
+exports.editarS = function (req, res) {
+    fs.readFile('../views/editarsobre.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();

@@ -15,60 +15,62 @@
 
 <body ng-app ng-controller="EditarCtrlR">
 
+
     <figure id="img-home" class="imghome">
-        <img src="../public/img/imghome.jpg">
+        <img src="/img/imghome.jpg">
     </figure>
     <ul id="lst_cadastro" class="lst-cadastro">
-        <a id="menu_home" class="menu" href="index.html">
+        <a id="menu_home" class="menu" href="/S">
             <li>☼</li>
         </a>
-        <a id="menu_pontosturisticos" class="menu" href="../">
+        <a id="menu_pontosturisticos" class="menu" href="/">
             <li>Pontos Turísticos</li>
         </a>
-        <a id="menu_hospedagem" class="menu" href="../H">
+        <a id="menu_hospedagem" class="menu" href="/H">
             <li>Hospedagens</li>
         </a>
-        <a id="menu_restaurantes" class="menu" href="../R">
+        <a id="menu_restaurantes" class="menu" href="/R">
             <li>Restaurantes</li>
         </a>
-        <a id="menu_transportes" class="menu" href="../T">
+        <a id="menu_transportes" class="menu" href="/T">
             <li>Transportes</li>
         </a>
-        <a id="menu_utilidadepublica" class="menu" href="../U">
+        <a id="menu_utilidadepublica" class="menu" href="/U">
             <li>Utilidades Públicas</li>
         </a>
     </ul>
 
     <form ng-model="restaurante" name="restauranteform">
         <fieldset>
-            <div id="tipo">Tipo:
+            <div id="tipo"><strong>Tipo:</strong>
                 <select name="tipo" ng-model="restaurante.tipo">
                     <option value="Quiosques">Quiosques</option>
                     <option value="Comida Caseira">Comida Caseira</option>
                     <option value="Culinaria Especializada">Culinária Especializada</option>
                     <option value="Comida Tipica">Comida Típica</option>
                 </select>
+                <strong>Nome:</strong>
+                <input type="text" required name="nome" id="r_nome" placeholder="{{restaurante.nome}}" ng-model="restaurante.nome" size="350" />
             </div>
 
-            <label for="r_nome">
-                <p>Nome:
-                    <input type="text" required name="nome" id="r_nome" placeholder="{{restaurante.nome}}" ng-model="restaurante.nome" size="350" />
-            </label>
+
+
+
+            <strong><p>Endereço:</strong>
+            <input type="text" required name="endereco" id="r_endereco" placeholder="{{restaurante.endereco}}" ng-model="restaurante.endereco" size="147" />
             </p>
-            <label for="r_endereco">
-                <p>Endereço:
-                    <input type="text" required name="endereco" id="r_endereco" placeholder="{{restaurante.endereco}}" ng-model="restaurante.endereco" size="147" />
-            </label>
+
+            <strong>Telefone:</strong>
+            <input type="text" required name="telefone" id="r_telefone" placeholder="{{restaurante.telefone}}" ng-model="restaurante.telefone" size="147 " />
+
+            <strong> <p>Imagens:</strong>
+            <input type="text" required name="imagens" id="r_imagens" placeholder="{{restaurante.imagens}}" ng-model="restaurante.imagens" size="147 " />
             </p>
-            <label for="r_telefone">
-                <p>Telefone:
-                    <input type="text" required name="telefone" id="r_telefone" placeholder="{{restaurante.telefone}}" ng-model="restaurante.telefone" size="147 " />
-                </p>
-            </label>
-            <label for="r_textarea ">
-                <p>Descrição:</p>
-                <textarea id="textarea " required name="descricao " placeholder="{{restaurante.descricao}} " ng-model="restaurante.descricao " maxlength="300 " /></textarea>
-            </label>
+
+
+            <strong><p>Descrição:</strong>
+            <textarea id="textarea " required name="descricao " placeholder="{{restaurante.descricao}} " ng-model="restaurante.descricao " maxlength="300 " /></textarea>
+            </p>
             <div class="form-actions ">
                 <button ng-click="modificarR() " class="btn btn-primary ">Modificar</button>
                 <a href="/R " class="btn ">Voltar</a>
