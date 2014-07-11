@@ -40,15 +40,31 @@
 
     <form ng-model="sobre" name="sobreform">
         <fieldset>
+            <strong><p>Mapa:</strong>
+
+            <input type="text" required name="mapa" id="s_mapa" ng-model="sobre.mapa" placeholder="Link de seu Mapa" size="147 " />
+            </p>
 
 
             <strong>Imagens:</strong>
             <input type="text" required name="imagens" id="s_imagens" ng-model="sobre.imagens" placeholder="Link de sua imagem" size="147 " />
 
 
-            <strong> <p>Descrição:</strong>
+
+            <strong><p>Imagens Detalhe1:</strong>
+            <input type="text" required name="imagensD1" id="s_imagensD1" ng-model="sobre.imagensD1" placeholder="Link de sua imagem" size="147 " />
+            </p>
+
+
+            <strong>Imagens Detalhe2:</strong>
+            <input type="text" required name="imagensD2" id="s_imagensD2" ng-model="sobre.imagensD2" placeholder="Link de sua imagem" size="147 " />
+
+
+
+            <strong><p>Descrição:</strong>
             <textarea id="textarea" required name="s_descricao" ng-model="sobre.nome" placeholder="Faça uma breve descriçao sobre..." maxlength="300"></textarea>
             </p>
+
             <div class="form-actions">
                 <button ng-click="criarS()" class="btn btn-primary">Salvar</button>
                 <a href="/S" class="btn">Voltar</a>

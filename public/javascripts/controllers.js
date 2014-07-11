@@ -52,6 +52,8 @@ function EditarCtrl($scope, $http) {
         $scope.ponto.nome = data[0].nome;
         $scope.ponto.endereco = data[0].endereco;
         $scope.ponto.imagens = data[0].imagens;
+        $scope.ponto.imagensD1 = data[0].imagensD1;
+        $scope.ponto.imagensD2 = data[0].imagensD2;
         $scope.ponto.descricao = data[0].descricao;
     })
 
@@ -121,6 +123,8 @@ function EditarCtrlR($scope, $http) {
         $scope.restaurante.nome = data[0].nome;
         $scope.restaurante.endereco = data[0].endereco;
         $scope.restaurante.imagens = data[0].imagens;
+        $scope.restaurante.imagensD1 = data[0].imagensD1;
+        $scope.restaurante.imagensD2 = data[0].imagensD2;
         $scope.restaurante.telefone = data[0].telefone;
         $scope.restaurante.descricao = data[0].descricao;
     })
@@ -191,6 +195,8 @@ function EditarCtrlT($scope, $http) {
         $scope.transporte.nome = data[0].nome;
         $scope.transporte.telefone = data[0].telefone;
         $scope.transporte.imagens = data[0].imagens;
+        $scope.transporte.imagensD1 = data[0].imagensD1;
+        $scope.transporte.imagensD2 = data[0].imagensD2;
         $scope.transporte.descricao = data[0].descricao;
     })
 
@@ -259,6 +265,8 @@ function EditarCtrlU($scope, $http) {
         $scope.utilidade.nome = data[0].nome;
         $scope.utilidade.endereco = data[0].endereco;
         $scope.utilidade.imagens = data[0].imagens;
+        $scope.utilidade.imagensD1 = data[0].imagensD1;
+        $scope.utilidade.imagensD2 = data[0].imagensD2;
         $scope.utilidade.telefone = data[0].telefone;
         $scope.utilidade.descricao = data[0].descricao;
     })
@@ -329,6 +337,8 @@ function EditarCtrlH($scope, $http) {
         $scope.hospedagem.nome = data[0].nome;
         $scope.hospedagem.endereco = data[0].endereco;
         $scope.hospedagem.imagens = data[0].imagens;
+        $scope.hospedagem.imagensD1 = data[0].imagensD1;
+        $scope.hospedagem.imagensD2 = data[0].imagensD2;
         $scope.hospedagem.telefone = data[0].telefone;
         $scope.hospedagem.descricao = data[0].descricao;
     })
@@ -397,6 +407,9 @@ function EditarCtrlS($scope, $http) {
 
         $scope.sobre.imagens = data[0].imagens;
         $scope.sobre.nome = data[0].nome;
+        $scope.sobre.mapa = data[0].nome;
+        $scope.sobre.imagensD1 = data[0].nome;
+        $scope.sobre.imagensD2 = data[0].nome;
     })
 
     $scope.modificarS = function () {

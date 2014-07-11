@@ -12,8 +12,10 @@ exports.listarS = function (req, res) {
 
 exports.gravarS = function (req, res) {
     var novoSobre = new sobreModel({
-
+        mapa: req.body.mapa,
         imagens: req.body.imagens,
+        imagensD1: req.body.imagensD1,
+        imagensD2: req.body.imagensD2,
         nome: req.body.nome
     });
     novoSobre.save(function (err) {
@@ -40,8 +42,10 @@ exports.modificarS = function (req, res) {
     sobreModel.update({
         _id: req.params.id
     }, {
-
+        mapa: req.body.mapa,
         imagens: req.body.imagens,
+        imagensD1: req.body.imagensD1,
+        imagensD2: req.body.imagensD2,
         nome: req.body.nome
     }).exec(function (err) {
         if (err) {

@@ -15,6 +15,8 @@ exports.gravarT = function (req, res) {
         nome: req.body.nome,
         telefone: req.body.telefone,
         imagens: req.body.imagens,
+        imagensD1: req.body.imagensD1,
+        imagensD2: req.body.imagensD2,
         descricao: req.body.descricao
     });
     novoTransporte.save(function (err) {
@@ -45,6 +47,8 @@ exports.modificarT = function (req, res) {
         nome: req.body.nome,
         telefone: req.body.telefone,
         imagens: req.body.imagens,
+        imagensD1: req.body.imagensD1,
+        imagensD2: req.body.imagensD2,
         descricao: req.body.descricao
     }).exec(function (err) {
         if (err) {

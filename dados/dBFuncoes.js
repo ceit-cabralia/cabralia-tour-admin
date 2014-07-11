@@ -15,6 +15,8 @@ exports.gravar = function (req, res) {
         nome: req.body.nome,
         endereco: req.body.endereco,
         imagens: req.body.imagens,
+        imagensD1: req.body.imagensD1,
+        imagensD2: req.body.imagensD2,
         descricao: req.body.descricao
     });
     novoPonto.save(function (err) {
@@ -44,6 +46,8 @@ exports.modificar = function (req, res) {
         nome: req.body.nome,
         endereco: req.body.endereco,
         imagens: req.body.imagens,
+        imagensD1: req.body.imagensD1,
+        imagensD2: req.body.imagensD2,
         descricao: req.body.descricao
     }).exec(function (err) {
         if (err) {

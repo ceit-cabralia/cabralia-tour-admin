@@ -60,17 +60,22 @@
             <strong><p>Imagens:</strong>
             <input type="text" required name="imagens" id="t_imagens" placeholder="{{transporte.imagens}}" ng-model="transporte.imagens" size="147 " />
             </p>
+            <strong>Imagens Detalhe1:</strong>
+            <input type="text" required name="imagensD1" id="t_imagensD1" placeholder="{{transporte.imagensD1}}" ng-model="transporte.imagensD1" size="147 " />
 
-            <strong><p>Descrição:</strong>
-            <textarea id="textarea " required name="t_descricao " placeholder="{{transporte.descricao}} " ng-model="transporte.descricao" " maxlength="300 "></textarea>
+            <strong><p>Imagens Detalhe2:</strong>
+            <input type="text" required name="imagensD2" id="t_imagensD2" placeholder="{{transporte.imagensD2}}" ng-model="transporte.imagensD2" size="147 " />
             </p>
-                                                                                                                                                             
+
+            <strong>Descrição:</strong>
+            <textarea id="textarea " required name="descricao " placeholder="{{transporte.descricao}} " ng-model="transporte.descricao " maxlength="300 " /></textarea>
+
             <div class="form-actions ">
                 <button ng-click="modificarT() " class="btn btn-primary ">Modificar</button>
                 <a href="/T " class="btn ">Voltar</a>
             </div>
-            </fieldset>
-            </form>
+        </fieldset>
+    </form>
 
 </body>
 

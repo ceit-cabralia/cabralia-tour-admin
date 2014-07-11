@@ -1,9 +1,9 @@
 mongoose = require('mongoose');
 
 
-mongoose.connect('mongodb://ceitpr3g:ceitpr3g1906@ds027809.mongolab.com:27809/hayodb');
+//mongoose.connect('mongodb://ceitpr3g:ceitpr3g1906@ds027809.mongolab.com:27809/hayodb');
 
-//mongoose.connect('mongodb://localhost:27017/hayoDB');
+mongoose.connect('mongodb://localhost:27017/hayoDB');
 
 
 
@@ -21,6 +21,8 @@ function init() {
         },
         endereco: String,
         imagens: String,
+        imagensD1: String,
+        imagensD2: String,
         descricao: String
     });
     pontoModel = mongoose.model('Ponto', schema);
@@ -34,6 +36,8 @@ function init() {
             unique: true
         },
         imagens: String,
+        imagensD1: String,
+        imagensD2: String,
         endereco: String,
         telefone: String,
         descricao: String
@@ -48,6 +52,8 @@ function init() {
             unique: true
         },
         imagens: String,
+        imagensD1: String,
+        imagensD2: String,
         telefone: String,
         descricao: String
     });
@@ -62,6 +68,8 @@ function init() {
         },
         endereco: String,
         imagens: String,
+        imagensD1: String,
+        imagensD2: String,
         telefone: String,
         descricao: String
     });
@@ -76,6 +84,8 @@ function init() {
         },
         endereco: String,
         imagens: String,
+        imagensD1: String,
+        imagensD2: String,
         telefone: String,
         descricao: String
     });
@@ -89,8 +99,11 @@ function init() {
             type: String,
             unique: true
         },
+        mapa: String,
+        imagens: String,
+        imagensD1: String,
+        imagensD2: String
 
-        imagens: String
     });
     sobreModel = mongoose.model('Sobre', schema);
 

@@ -67,11 +67,15 @@
             <strong><p>Imagens:</strong> 
             <input type="text" required name="imagens" id="r_imagens" ng-model="restaurante.imagens" placeholder="Link de sua imagem" size="147 " />
             </p>
+            <strong>Imagens Detalhe1:</strong>
+            <input type="text" required name="imagensD1" id="r_imagensD1" ng-model="restaurante.imagensD1" placeholder="Link de sua imagem" size="147 " />
 
-
-            <strong> <p>Descrição:</strong>
-            <textarea id="textarea" required name="r_descricao" ng-model="restaurante.descricao" placeholder="Faça uma breve descriçao sobre Restaurantes..." maxlength="300"></textarea>
+            <strong><p>Imagens Detalhe2:</strong>
+            <input type="text" required name="imagensD2" id="r_imagensD2" ng-model="restaurante.imagensD2" placeholder="Link de sua imagem" size="147 " />
             </p>
+
+            <strong> <Descrição:</strong>
+            <textarea id="textarea" required name="r_descricao" ng-model="restaurante.descricao" placeholder="Faça uma breve descriçao sobre Restaurantes..." maxlength="300"></textarea>
             <div class="form-actions">
                 <button ng-click="criarR()" class="btn btn-primary">Salvar</button>
                 <a href="/R" class="btn">Voltar</a>
