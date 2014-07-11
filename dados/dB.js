@@ -1,10 +1,9 @@
 mongoose = require('mongoose');
 
-// Conexao com o Banco
 
-//mongoose.connect('mongodb://ceitpr3g:ceitpr3g1906@ds027809.mongolab.com:27809/hayodb');
+mongoose.connect('mongodb://ceitpr3g:ceitpr3g1906@ds027809.mongolab.com:27809/hayodb');
 
-mongoose.connect('mongodb://localhost:27017/hayoDB');
+//mongoose.connect('mongodb://localhost:27017/hayoDB');
 
 
 
