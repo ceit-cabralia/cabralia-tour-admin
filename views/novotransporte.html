@@ -71,8 +71,14 @@
             </p>
 
 
-            <strong>Descrição:</strong>
+            <strong>Placa:</strong>
+            <input type="text " required name="placa" id="t_placa " ng-model="transporte.placa " placeholder="Placa do Transporte " size="350 " />
+
+
+
+            <strong><p>Descrição:</strong>
             <textarea id="textarea " required name="descricao " ng-model="transporte.descricao " placeholder="Faça uma breve descriçao sobre os Transportes... " maxlength="300 "></textarea>
+            </p>
 
             <div class="form-actions ">
                 <button ng-click="criarT() " class="btn btn-primary ">Salvar</button>

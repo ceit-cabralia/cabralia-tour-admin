@@ -54,7 +54,8 @@
 
             </div>
 
-
+            <strong><p>Telefone:</strong>
+            <input type="text" required name="telefone" id="t_telefone" placeholder="{{transporte.telefone}}" ng-model="transporte.telefone" size="147 " />
 
 
             <strong><p>Imagens:</strong>
@@ -67,12 +68,15 @@
             <input type="text" required name="imagensD2" id="t_imagensD2" placeholder="{{transporte.imagensD2}}" ng-model="transporte.imagensD2" size="147 " />
             </p>
 
-            <strong>Descrição:</strong>
-            <textarea id="textarea " required name="descricao " placeholder="{{transporte.descricao}} " ng-model="transporte.descricao " maxlength="300 " /></textarea>
+            <strong>Placa:</strong>
+            <input type="text" required name="placa" id="t_placa" placeholder="{{transporte.placa}}" ng-model="transporte.placa" size="147 " />
 
-            <div class="form-actions ">
-                <button ng-click="modificarT() " class="btn btn-primary ">Modificar</button>
-                <a href="/T " class="btn ">Voltar</a>
+
+            <strong><p>Descrição:</strong>
+            <textarea id="textarea " required name="descricao " placeholder="{{transporte.descricao}} " ng-model="transporte.descricao " maxlength="300 " /></textarea>
+            </p <div class="form-actions ">
+            <button ng-click="modificarT() " class="btn btn-primary ">Modificar</button>
+            <a href="/T " class="btn ">Voltar</a>
             </div>
         </fieldset>
     </form>

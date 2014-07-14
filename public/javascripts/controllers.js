@@ -197,6 +197,7 @@ function EditarCtrlT($scope, $http) {
         $scope.transporte.imagens = data[0].imagens;
         $scope.transporte.imagensD1 = data[0].imagensD1;
         $scope.transporte.imagensD2 = data[0].imagensD2;
+        $scope.transporte.placa = data[0].placa;
         $scope.transporte.descricao = data[0].descricao;
     })
 
