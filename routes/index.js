@@ -49,7 +49,7 @@ exports.excluir = function (req, res) {
 };
 
 exports.editar = function (req, res) {
-    fs.readFile('../views/editarponto.html', function (error, content) {
+    fs.readFile('./views/editarponto.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -65,7 +65,7 @@ exports.editar = function (req, res) {
 // ROTAS de Restaurantes
 
 exports.indexR = function (req, res) {
-    fs.readFile('../views/restaurantes.html', function (error, content) {
+    fs.readFile('./views/restaurantes.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -79,7 +79,7 @@ exports.indexR = function (req, res) {
 };
 
 exports.novoR = function (req, res) {
-    fs.readFile('../views/novorestaurante.html', function (error, content) {
+    fs.readFile('./views/novorestaurante.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -105,7 +105,7 @@ exports.excluirR = function (req, res) {
 };
 
 exports.editarR = function (req, res) {
-    fs.readFile('../views/editarrestaurante.html', function (error, content) {
+    fs.readFile('./views/editarrestaurante.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -122,7 +122,7 @@ exports.editarR = function (req, res) {
 // ROTAS de Transportes
 
 exports.indexT = function (req, res) {
-    fs.readFile('../views/transportes.html', function (error, content) {
+    fs.readFile('./views/transportes.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -136,7 +136,7 @@ exports.indexT = function (req, res) {
 };
 
 exports.novoT = function (req, res) {
-    fs.readFile('../views/novotransporte.html', function (error, content) {
+    fs.readFile('./views/novotransporte.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -162,7 +162,7 @@ exports.excluirT = function (req, res) {
 };
 
 exports.editarT = function (req, res) {
-    fs.readFile('../views/editartransporte.html', function (error, content) {
+    fs.readFile('./views/editartransporte.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -177,7 +177,7 @@ exports.editarT = function (req, res) {
 
 // ROTAS de Utilidades Públicas
 exports.indexU = function (req, res) {
-    fs.readFile('../views/utilidadepublica.html', function (error, content) {
+    fs.readFile('./views/utilidadepublica.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -191,7 +191,7 @@ exports.indexU = function (req, res) {
 };
 
 exports.novoU = function (req, res) {
-    fs.readFile('../views/novautilidade.html', function (error, content) {
+    fs.readFile('./views/novautilidade.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -217,7 +217,7 @@ exports.excluirU = function (req, res) {
 };
 
 exports.editarU = function (req, res) {
-    fs.readFile('../views/editarutilidade.html', function (error, content) {
+    fs.readFile('./views/editarutilidade.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -235,7 +235,7 @@ exports.editarU = function (req, res) {
 // ROTAS de Hospedagens
 
 exports.indexH = function (req, res) {
-    fs.readFile('../views/hospedagem.html', function (error, content) {
+    fs.readFile('./views/hospedagem.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -249,7 +249,7 @@ exports.indexH = function (req, res) {
 };
 
 exports.novoH = function (req, res) {
-    fs.readFile('../views/novohospedagem.html', function (error, content) {
+    fs.readFile('./views/novohospedagem.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -275,7 +275,7 @@ exports.excluirH = function (req, res) {
 };
 
 exports.editarH = function (req, res) {
-    fs.readFile('../views/editarhospedagem.html', function (error, content) {
+    fs.readFile('./views/editarhospedagem.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -291,7 +291,7 @@ exports.editarH = function (req, res) {
 // ROTAS de Sobre
 
 exports.indexS = function (req, res) {
-    fs.readFile('../views/sobre.html', function (error, content) {
+    fs.readFile('./views/sobre.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -305,7 +305,7 @@ exports.indexS = function (req, res) {
 };
 
 exports.novoS = function (req, res) {
-    fs.readFile('../views/novosobre.html', function (error, content) {
+    fs.readFile('./views/novosobre.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -331,7 +331,7 @@ exports.excluirS = function (req, res) {
 };
 
 exports.editarS = function (req, res) {
-    fs.readFile('../views/editarsobre.html', function (error, content) {
+    fs.readFile('./views/editarsobre.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
