@@ -11,10 +11,13 @@ var express = require('express'),
 
 var app = module.exports = express.createServer();
 
+var config = this;
+
 app.configure(function () {
     app.use(express.bodyParser());
     app.use(express.methodOverride());
     app.use(app.router);
+    app.set('views', __dirname + '../views');
     app.use('/css', express.static(__dirname + './../public/stylesheets'));
     app.use('/js', express.static(__dirname + './../public/javascripts'));
     app.use('/img', express.static(__dirname + './../public/images/'));
@@ -95,6 +98,7 @@ app.get('/lista/sobre', sobre.listarS);
 app.get('/lista/sobre/:nom', sobre.procurarS);
 
 
-
-app.listen(3000);
-console.log("Servidor está executando na porta %d em modo de %s", app.address().port, app.settings.env);
+var  port = process.env.PORT || CONFIG.port;
+app.listen(port, function(){
+  console.log("rodando na porta " + port);
+});
