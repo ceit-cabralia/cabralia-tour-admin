@@ -9,7 +9,7 @@ var fs = require('fs'),
 
 
 exports.index = function (req, res) {
-    fs.readFile('../views/pontos.html', function (error, content) {
+    fs.readFile('./views/pontos.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
@@ -23,7 +23,7 @@ exports.index = function (req, res) {
 };
 
 exports.novo = function (req, res) {
-    fs.readFile('../views/novoponto.html', function (error, content) {
+    fs.readFile('./views/novoponto.html', function (error, content) {
         if (error) {
             res.writeHead(500);
             res.end();
