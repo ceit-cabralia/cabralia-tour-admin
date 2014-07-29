@@ -1,9 +1,9 @@
 mongoose = require('mongoose');
 
 
-//mongoose.connect('mongodb://ceitpr3g:ceitpr3g1906@ds027809.mongolab.com:27809/hayodb');
+mongoose.connect('mongodb://ceitpr3g:ceitpr3g1906@ds027809.mongolab.com:27809/hayodb');
 
-mongoose.connect('mongodb://localhost:27017/hayoDB');
+//mongoose.connect('mongodb://localhost:27017/hayoDB');
 
 
 
@@ -23,7 +23,8 @@ function init() {
         imagens: String,
         imagensD1: String,
         imagensD2: String,
-        descricao: String
+        descricao: String,
+        
     });
     pontoModel = mongoose.model('Ponto', schema);
 
@@ -92,19 +93,18 @@ function init() {
     hospedagemModel = mongoose.model('Hospedagem', schema);
 
     //Esquemas de SOBRE
-
     schema = new mongoose.Schema({
 
-        nome: {
+        descricao: {
             type: String,
             unique: true
         },
-        mapa: String,
-        imagens: String,
-        imagensD1: String,
-        imagensD2: String
+        imagens01: String,
+        historia: String,
+        imagens02: String,
+        mapa01: String,
+        mapa02: String,
 
     });
     sobreModel = mongoose.model('Sobre', schema);
-
 }

@@ -41,29 +41,32 @@
 
     <form ng-model="sobre" name="sobreform">
         <fieldset>
-            <strong><p>Mapa:</strong>
-            <input type="text" required name="mapa" id="s_mapa" placeholder="{{sobre.mapa}}" ng-model="sobre.mapa" size="147 " />
-            </p>
-
-            <strong>Imagens:</strong>
-            <input type="text" required name="imagens" id="s_imagens" placeholder="{{sobre.imagens}}" ng-model="sobre.imagens" size="147 " />
-
-
-            <strong><p>Imagens Detalhe1:</strong>
-            <input type="text" required name="imagensD1" id="s_imagensD1" placeholder="{{sobre.imagensD1}}" ng-model="sobre.imagensD1" size="147 " />
-            </p>
-
-
-
-            <strong>Imagens Detalhe2:</strong>
-            <input type="text" required name="imagensD2" id="s_imagensD2" placeholder="{{sobre.imagensD2}}" ng-model="sobre.imagensD2" size="147 " />
-
-
+            
+            <strong>Imagens01:</strong>
+            <input type="text" required name="imagens01" id="s_imagens01" placeholder="{{sobre.imagens01}}" ng-model="sobre.imagens01" size="147 " />
 
 
             <strong><p>Descrição:</strong>
-            <textarea id="textarea " required name="descricao " placeholder="{{sobre.nome}} " ng-model="sobre.nome " maxlength="300 " /></textarea>
+            <textarea id="textarea " required name="descricao " placeholder="{{sobre.descricao}} " ng-model="sobre.descricao " maxlength="300 " /></textarea>
             </p>
+            
+
+            <strong>Imagens02:</strong>
+            <input type="text" required name="imagens02" id="s_imagens02" placeholder="{{sobre.imagens02}}" ng-model="sobre.imagens02" size="147 " />
+
+
+            <strong><p>Historia:</strong>
+            <textarea id="s_historia " required name="historia " placeholder="{{sobre.historia}} " ng-model="sobre.historia " maxlength="300 " /></textarea>
+            </p>
+            <strong>Mapa01:</strong>
+            <input type="text" required name="mapa01" id="s_mapa01" placeholder="{{sobre.mapa01}}" ng-model="sobre.mapa01" size="147 " />
+
+             <strong>Mapa02:</strong>
+            <input type="text" required name="mapa02" id="s_mapa02" placeholder="{{sobre.mapa02}}" ng-model="sobre.mapa02" size="147 " />
+
+
+
+
             <div class="form-actions ">
                 <button ng-click="modificarS() " class="btn btn-primary ">Modificar</button>
                 <a href="/S " class="btn ">Voltar</a>

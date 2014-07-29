@@ -12,11 +12,14 @@ exports.listarS = function (req, res) {
 
 exports.gravarS = function (req, res) {
     var novoSobre = new sobreModel({
-        mapa: req.body.mapa,
-        imagens: req.body.imagens,
-        imagensD1: req.body.imagensD1,
-        imagensD2: req.body.imagensD2,
-        nome: req.body.nome
+        imagens01: req.body.imagens01,
+        descricao: req.body.descricao,
+        imagens02: req.body.imagens02,
+        historia: req.body.historia,
+        mapa01: req.body.mapa01,
+        mapa02: req.body.mapa02,
+       
+
     });
     novoSobre.save(function (err) {
         if (err) {
@@ -42,11 +45,13 @@ exports.modificarS = function (req, res) {
     sobreModel.update({
         _id: req.params.id
     }, {
-        mapa: req.body.mapa,
-        imagens: req.body.imagens,
-        imagensD1: req.body.imagensD1,
-        imagensD2: req.body.imagensD2,
-        nome: req.body.nome
+        imagens01: req.body.imagens01,
+        descricao: req.body.descricao,
+        imagens02: req.body.imagens02,
+        historia: req.body.historia,
+        mapa01: req.body.mapa01,
+        mapa02: req.body.mapa02
+        
     }).exec(function (err) {
         if (err) {
             callback(err);

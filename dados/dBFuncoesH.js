@@ -19,7 +19,8 @@ exports.gravarH = function (req, res) {
         imagens: req.body.imagens,
         imagensD1: req.body.imagensD1,
         imagensD2: req.body.imagensD2,
-        descricao: req.body.descricao
+        descricao: req.body.descricao,
+         categoria: "hosp/"
     });
     novoHospedagem.save(function (err) {
         if (err) {
@@ -52,7 +53,8 @@ exports.modificarH = function (req, res) {
         imagens: req.body.imagens,
         imagensD1: req.body.imagensD1,
         imagensD2: req.body.imagensD2,
-        descricao: req.body.descricao
+        descricao: req.body.descricao,
+         categoria: "hosp/"
     }).exec(function (err) {
         if (err) {
             callback(err);

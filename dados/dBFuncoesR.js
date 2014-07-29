@@ -19,7 +19,8 @@ exports.gravarR = function (req, res) {
         imagens: req.body.imagens,
         imagensD1: req.body.imagensD1,
         imagensD2: req.body.imagensD2,
-        descricao: req.body.descricao
+        descricao: req.body.descricao,
+         categoria: "resta/"
     });
     novoRestaurante.save(function (err) {
         if (err) {
@@ -52,7 +53,8 @@ exports.modificarR = function (req, res) {
         imagens: req.body.imagens,
         imagensD1: req.body.imagensD1,
         imagensD2: req.body.imagensD2,
-        descricao: req.body.descricao
+        descricao: req.body.descricao,
+         categoria: "resta/"
     }).exec(function (err) {
         if (err) {
             callback(err);

@@ -97,8 +97,11 @@ app.delete('/excluirS/:nom', routes.excluirS);
 app.get('/lista/sobre', sobre.listarS);
 app.get('/lista/sobre/:nom', sobre.procurarS);
 
+/*// Configuração para rodar no servidor HEROKU 
+var port = process.env.PORT || CONFIG.port;
+app.listen(port); */
 
-var  port = process.env.PORT || CONFIG.port;
-app.listen(port, function(){
-  console.log("rodando na porta " + port);
+// Configuração para rodar no servidor LOCAL
+app.listen(3000, function () {
+  console.log("Express server listening on port %d in %s mode", app.address().port, app.settings.env);
 });
