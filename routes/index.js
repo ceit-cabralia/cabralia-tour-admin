@@ -9,9 +9,6 @@ var fs = require('fs'),
 
 
 exports.index = function (req, res) {
-    // Customização para rodar no Heroku
-    // fs.readFile('./views/pontos.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/pontos.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -26,9 +23,6 @@ exports.index = function (req, res) {
 };
 
 exports.novo = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/novoponto.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/novoponto.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -55,9 +49,6 @@ exports.excluir = function (req, res) {
 };
 
 exports.editar = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/editarponto.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/editarponto.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -71,12 +62,7 @@ exports.editar = function (req, res) {
     });
 };
 
-// ROTAS de Restaurantes
-
 exports.indexR = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/restaurantes.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/restaurantes.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -91,9 +77,6 @@ exports.indexR = function (req, res) {
 };
 
 exports.novoR = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/novorestaurante.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/novorestaurante.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -120,9 +103,6 @@ exports.excluirR = function (req, res) {
 };
 
 exports.editarR = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/editarrestaurante.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/editarrestaurante.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -136,13 +116,7 @@ exports.editarR = function (req, res) {
     });
 };
 
-
-// ROTAS de Transportes
-
 exports.indexT = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/transportes.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/transportes.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -157,9 +131,6 @@ exports.indexT = function (req, res) {
 };
 
 exports.novoT = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/novotransporte.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/novotransporte.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -186,9 +157,6 @@ exports.excluirT = function (req, res) {
 };
 
 exports.editarT = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/editartransporte.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/editartransporte.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -204,9 +172,6 @@ exports.editarT = function (req, res) {
 
 // ROTAS de Utilidades Públicas
 exports.indexU = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/utilidadepublica.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/utilidadepublica.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -221,9 +186,6 @@ exports.indexU = function (req, res) {
 };
 
 exports.novoU = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/novautilidade.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/novautilidade.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -250,9 +212,6 @@ exports.excluirU = function (req, res) {
 };
 
 exports.editarU = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/editarutilidade.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/editarutilidade.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -266,14 +225,7 @@ exports.editarU = function (req, res) {
     });
 };
 
-
-
-// ROTAS de Hospedagens
-
 exports.indexH = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/hospedagem.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/hospedagem.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -288,9 +240,6 @@ exports.indexH = function (req, res) {
 };
 
 exports.novoH = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/novohospedagem.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/novohospedagem.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -317,9 +266,6 @@ exports.excluirH = function (req, res) {
 };
 
 exports.editarH = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/editarhospedagem.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/editarhospedagem.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -336,9 +282,6 @@ exports.editarH = function (req, res) {
 // ROTAS de Sobre
 
 exports.indexS = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/sobre.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/sobre.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -353,9 +296,6 @@ exports.indexS = function (req, res) {
 };
 
 exports.novoS = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/novosobre.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/novosobre.html', function (error, content) {
         if (error) {
             res.writeHead(500);
@@ -382,9 +322,6 @@ exports.excluirS = function (req, res) {
 };
 
 exports.editarS = function (req, res) {
-     // Customização para rodar no Heroku
-    // fs.readFile('./views/editarsobre.html', function (error, content) {
-        //Customização para rodar Local
     fs.readFile('../views/editarsobre.html', function (error, content) {
         if (error) {
             res.writeHead(500);
