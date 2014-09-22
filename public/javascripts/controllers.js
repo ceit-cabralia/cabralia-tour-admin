@@ -1,6 +1,4 @@
-/*
-Controllers
-*/
+
 function ListaCtrl($scope, $http) {
     $scope.nome = '';
 
@@ -68,8 +66,6 @@ function EditarCtrl($scope, $http) {
         })
     }
 }
-
-// CRUD de CONTROLLERS para Restaurantes
 
 function ListaCtrlR($scope, $http) {
     $scope.nome = '';
@@ -141,8 +137,6 @@ function EditarCtrlR($scope, $http) {
     }
 }
 
-
-// CRUD de CONTROLLERS para Transportes
 function ListaCtrlT($scope, $http) {
     $scope.nome = '';
 
@@ -213,7 +207,6 @@ function EditarCtrlT($scope, $http) {
     }
 }
 
-// CRUD de CONTROLLERS para Utilidades Públicas
 function ListaCtrlU($scope, $http) {
     $scope.nome = '';
 
@@ -284,8 +277,6 @@ function EditarCtrlU($scope, $http) {
     }
 }
 
-// CRUD de CONTROLLERS para hospedagens
-
 function ListaCtrlH($scope, $http) {
     $scope.nome = '';
 
@@ -355,7 +346,6 @@ function EditarCtrlH($scope, $http) {
         })
     }
 }
-// CRUD de CONTROLLERS para Sobre
 
 function ListaCtrlS($scope, $http) {
     $scope.nome = '';
